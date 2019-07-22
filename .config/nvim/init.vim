@@ -206,18 +206,6 @@ nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
-"""""""""""""""""
-" YouCompleteMe "
-"""""""""""""""""
-"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-" set the white list of ycm conf files
-"let g:ycm_extra_conf_globlist = ['/SevOneNMS/*']
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode
-"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 """""""""""""
 " AutoPairs "
 """""""""""""
@@ -229,15 +217,6 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " FZF "
 """""""
 nmap <leader>p :FZF<cr>
-
-"""""""""""""
-" Ultisnips "
-"""""""""""""
-" set ultisnips to use a key that doesn't conflict with YCM
-"let g:UltiSnipsExpandTrigger="<c-j>"
-"let g:UltiSnipsJumpForwardTrigger="<c-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
 
 """""""""""
 " Rainbow "
