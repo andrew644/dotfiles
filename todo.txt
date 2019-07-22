@@ -11,4 +11,3 @@ ssd trim?
 screensaver
 gpu driver?
 ls colors
-capslock -> escape
