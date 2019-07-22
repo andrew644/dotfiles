@@ -1,0 +1,14 @@
+ix terminal colors
+fix terminal font
+fix terminal git prompt
+firefox color scheme
+background
+dual monitor workspaces?
+backup dotfiles
+dotfile installer
+ssd trim?
+
+screensaver
+gpu driver?
+ls colors
+capslock -> escape
