@@ -6,6 +6,6 @@ ln -sf ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 ln -sf ~/dotfiles/.config/.xinitrc ~/.xinitrc
 
-ln -sf ~/dotfiles/.config/.zprofile ~/.zprofile
-ln -sf ~/dotfiles/.config/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.config/zsh/.zprofile ~/.zprofile
+ln -sf ~/dotfiles/.config/zsh/.zshrc ~/.zshrc
 

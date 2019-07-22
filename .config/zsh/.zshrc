@@ -26,12 +26,7 @@ alias v=nvim
 
 alias ls='ls --color=auto'
 
-# Prompt
-PROMPT='%K{blue}$(printf " %.0s" $(seq 1 $(tput cols)))%k
-%F{red}%(?,,X %?  )%f%T  %m  %F{blue}%~%f
-λ '
-RPROMPT='GIT'
-#RPROMPT='$(git_prompt_info)'
-
+# Set prompt
+[ -f ~/.config/zsh/.zshprompt.sh ] && source ~/.config/zsh/.zshprompt.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
