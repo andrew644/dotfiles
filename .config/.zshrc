@@ -24,6 +24,8 @@ alias vim=nvim
 alias vi=nvim
 alias v=nvim
 
+alias ls='ls --color=auto'
+
 # Prompt
 PROMPT='%K{blue}$(printf " %.0s" $(seq 1 $(tput cols)))%k
 %F{red}%(?,,X %?  )%f%T  %m  %F{blue}%~%f
