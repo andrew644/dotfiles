@@ -20,22 +20,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 " Better directory tree management
 Plug 'scrooloose/nerdtree'
-" Comment out sections of code
-Plug 'scrooloose/nerdcommenter'
-" Fuzzy search for files
-"Plug 'ctrlpvim/ctrlp.vim'
 " Better fuzzy search for files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Jump to letters
 Plug 'Lokaltog/vim-easymotion'
 " Number the items that are found when searching
 Plug 'vim-scripts/IndexedSearch'
-" Automatically add closing ), ], }, ", and '
-"Plug 'jiangmiao/auto-pairs'
-" Compute MD5 or SHA1 checksum of entire file or range of lines.
-Plug 'vim-scripts/checksum.vim'
-" Multiple cursors like Sublime Text
-"Plug 'terryma/vim-multiple-cursors'
 
 """"""""""""
 " Cosmetic "
@@ -46,8 +36,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 " Paper color theme
 Plug 'NLKNguyen/papercolor-theme'
-" Rainbow (, [, and {
-Plug 'luochen1990/rainbow'
 " Light weight interface improvement
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -64,19 +52,6 @@ Plug 'rust-lang/rust.vim'
 " Syntax and autoformat
 Plug 'fatih/vim-go'
 
-"""""""""""""""""""""""""""""""""""
-" Plugins that require modern vim "
-"""""""""""""""""""""""""""""""""""
-if has("python") && v:version >= 742
-	" Autocomplete and c++ error checking
-	"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer'  }
-	" Autogenerate YCM config
-	"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-	" Snippets
-	"Plug 'SirVer/ultisnips'
-endif
-
 " Add plugins to &runtimepath
 filetype plugin indent on
 call plug#end()
@@ -88,7 +63,12 @@ call plug#end()
 map <F6> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 set t_Co=256 " Explicitly tell vim that the terminal has 256 colors
 set background=light
+set number
 colorscheme PaperColor
+
+"""""""""""""""""""
+" Editor Settings "
+"""""""""""""""""""
 " Set indentation settings
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 " Use spaces for python
@@ -96,9 +76,6 @@ autocmd Filetype python setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=
 " Use spaces for rust
 autocmd Filetype rust setlocal expandtab tabstop=4 shiftwidth=4
 
-"""""""""""""""""""
-" Editor Settings "
-"""""""""""""""""""
 " Switch buffers without having to save them first
 set hidden
 
@@ -132,9 +109,6 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+\%#\@<!$\| \+\ze\t/ containedin=
 
 " Toggle spell checking
 nmap <F1> :set spell!<return>
-
-" Relative line numbers on the side
-"set relativenumber
 
 " Always highlight the current line
 set cursorline
@@ -206,36 +180,10 @@ nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
-"""""""""""""
-" AutoPairs "
-"""""""""""""
-" Don't prevent closing brace from being inserted if one already exists
-"let g:AutoPairsMultilineClose = 0
-"let g:AutoPairsFlyMode = 0
-
 """""""
 " FZF "
 """""""
 nmap <leader>p :FZF<cr>
-
-"""""""""""
-" Rainbow "
-"""""""""""
-" Parentheses colours using Solarized
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
-
-let g:rainbow_conf = {
-\   'guifgs'     : ['#FE2712', '#66B032', '#0392CE', '#FD5308', '#0247FE', '#FB9902', '#8601AF', '#FEFE33', '#A7194B', '#D0EA2B'],
-\   'ctermfgs'   : ['0', '1', '2', '3', '6', '9', '10'],
-\   'separately' : {
-\       '*'   : {
-\       },
-\       'php'  : {
-\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold', 'start=/(/ end=/)/ containedin=@htmlPreproc contains=@phpClTop', 'start=/\[/ end=/\]/ containedin=@htmlPreproc contains=@phpClTop', 'start=/{/ end=/}/ containedin=@htmlPreproc contains=@phpClTop'],
-\       },
-\       'css'  : 0
-\   }
-\}
 
 """"""""""""
 " Rust.vim "
