@@ -8,7 +8,7 @@ setopt prompt_subst
 
 # prompt
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}["
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
@@ -47,6 +47,6 @@ else
 fi
 
 # basic prompt on the left
-PROMPT='%K{blue}$(printf " %.0s" $(seq 1 $(tput cols)))%k
-%F{red}%(?,,💢 %?  )%f%T  %F{blue}%~%f  
+PROMPT='%K{cyan}$(printf " %.0s" $(seq 1 $(tput cols)))%k
+%F{red}%(?,,X%? )%f%T  %F{blue}%~%f  
 λ '

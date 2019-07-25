@@ -9,3 +9,4 @@ ln -sf ~/dotfiles/config/.xinitrc ~/.xinitrc
 ln -sf ~/dotfiles/config/zsh/.zprofile ~/.zprofile
 ln -sf ~/dotfiles/config/zsh/.zshrc ~/.zshrc
 
+ln -sf ~/dotfiles/config/termite/config ~/.config/termite/config
