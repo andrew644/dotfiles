@@ -1,7 +1,5 @@
 fix terminal colors
 fix terminal font
-fix terminal git prompt
-fix terminal prompt
 firefox color scheme
 background
 ssd trim?

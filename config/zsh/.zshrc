@@ -36,8 +36,10 @@ alias vi=nvim
 alias v=nvim
 
 alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
+alias la='ls -la --color=auto'
 
 # Set prompt
-[ -f ~/.config/zsh/.zshprompt.sh ] && source ~/.config/zsh/.zshprompt.sh
+[ -f ~/dotfiles/config/zsh/.zshprompt.sh ] && source ~/dotfiles/config/zsh/.zshprompt.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
