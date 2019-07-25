@@ -1,12 +1,10 @@
-ix terminal colors
+fix terminal colors
 fix terminal font
 fix terminal git prompt
+fix terminal prompt
 firefox color scheme
 background
-dual monitor workspaces?
-backup dotfiles
-dotfile installer
 ssd trim?
 
-screensaver
+screen blanking on command? or set to 2 hours
 gpu driver?
