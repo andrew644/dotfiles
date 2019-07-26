@@ -215,23 +215,24 @@ client.focused_inactive $unfocused         $unfocused         $inactive-text-col
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
 
 
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status
-    font pango:monospace 9
-    strip_workspace_numbers yes
-
-    colors {
-        background $bg-color
-        separator  $separator
-        statusline $text-color
-        #                  border             background         text
-        focused_workspace  $border            $focused           $text-color
-        inactive_workspace $unfocused         $unfocused         $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-    }
-}
+#bar {
+#    status_command i3status
+#    font pango:monospace 9
+#    strip_workspace_numbers yes
+#
+#    colors {
+#        background $bg-color
+#        separator  $separator
+#        statusline $text-color
+#        #                  border             background         text
+#        focused_workspace  $border            $focused           $text-color
+#        inactive_workspace $unfocused         $unfocused         $inactive-text-color
+#        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#    }
+#}
 
 # floating windows
 for_window [class="Pavucontrol"] floating enable
@@ -283,4 +284,8 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 2s && kalu"
 
 # Wallpaper
-exec --no-startup-id sleep 2s; feh --bg-scale /home/andrew/Pictures/wallpaper/landscape1.jpg
+exec --no-startup-id sleep 2s; feh --bg-scale /home/andrew/Pictures/wallpaper/wallhaven-ox3gqm.jpg
+# start polybar
+exec_always --no-startup-id ~/.config/polybar/start.sh &
+# start compton
+exec_always --no-startup-id ~/.config/compton/start.sh &
