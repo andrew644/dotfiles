@@ -123,16 +123,16 @@ set $w8 "8:八"
 set $w9 "9:九"
 set $w0 "10:十"
 
-workspace $w1 output DVI-D-2
-workspace $w2 output DVI-D-2
-workspace $w3 output DVI-D-2
-workspace $w4 output DVI-D-2
-workspace $w5 output DVI-D-2
-workspace $w6 output HDMI-1
-workspace $w7 output HDMI-1
-workspace $w8 output HDMI-1
-workspace $w9 output HDMI-1
-workspace $w0 output HDMI-1
+workspace $w1 output DVI-D-1
+workspace $w2 output DVI-D-1
+workspace $w3 output DVI-D-1
+workspace $w4 output DVI-D-1
+workspace $w5 output DVI-D-1
+workspace $w6 output HDMI-A-0
+workspace $w7 output HDMI-A-0
+workspace $w8 output HDMI-A-0
+workspace $w9 output HDMI-A-0
+workspace $w0 output HDMI-A-0
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
