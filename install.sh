@@ -54,7 +54,19 @@ function enableSsdTrim() {
 }
 
 function installPackages() {
-	sudo pacman -S util-linux
+	sudo pacman -S util-linux ecryptfs-utils
+}
+
+function encrypt() {
+	sudo modprobe ecryptfs
+	ecryptfs-add-passphrase
+	mkdir -p ~/.secret ~/secret ~/.ecryptfs
+	echo "$HOME/.secret $HOME/secret ecryptfs" > ~/.ecryptfs/secret.conf
+	echo <keysig here> > ~/.ecryptfs/secret.sig
+	echo <keysig here> >> ~/.ecryptfs/secret.sig
+	# ecryptfs-add-passphrase
+	# mount.ecryptfs_private secret
+	# umount.ecryptfs_private secret
 }
 
 if [ -z "$1" ] || ( [ $1 != "init" ] && [ $1 != "reload" ] ); then
