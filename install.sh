@@ -48,6 +48,15 @@ function setupGit() {
 
 }
 
+function enableSsdTrim() {
+	# requires util-linux
+	systemctl enable --now fstrim.timer 
+}
+
+function installPackages() {
+	sudo pacman -S util-linux
+}
+
 if [ -z "$1" ] || ( [ $1 != "init" ] && [ $1 != "reload" ] ); then
 	showHelp
 fi
@@ -58,5 +67,7 @@ set -x
 setupLinks
 
 if [ $option == "init" ]; then
+	installPackages
 	setupGit
+	enableSsdTrim
 fi
