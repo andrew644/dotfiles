@@ -1,6 +1,5 @@
 firefox color scheme
-background
-ssd trim?
 
 screen blanking on command? or set to 2 hours
-gpu driver?
+
+currently downgraded to linux-5.2.8 because of ecrypt

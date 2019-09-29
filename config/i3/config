@@ -284,7 +284,7 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 2s && kalu"
 
 # Wallpaper
-exec --no-startup-id sleep 2s; feh --bg-scale /home/andrew/Pictures/wallpaper/wallhaven-ox3gqm.jpg
+exec --no-startup-id sleep 2s; feh --bg-fill /home/andrew/Pictures/wallpaper/zim.png
 # start polybar
 exec_always --no-startup-id ~/.config/polybar/start.sh &
 # start compton

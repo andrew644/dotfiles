@@ -1,8 +1,11 @@
-for discord add make sure tsched=0 is on this line:
+# for discord add make sure tsched=0 is on this line:
 load-module module-udev-detect tsched=0
 
-turn off TV
+# turn off TV
 xrandr --output HDMI-A-0 --off
 
-#wifi
+# wifi
 nmcli dev wifi con "<ssid here>" password "<password here>" name "home"
+
+# build and install aur package
+makepkg -si
