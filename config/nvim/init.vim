@@ -52,6 +52,13 @@ Plug 'rust-lang/rust.vim'
 " Syntax and autoformat
 Plug 'fatih/vim-go'
 
+"""""""""
+" Latex "
+"""""""""
+Plug 'lervag/vimtex'
+let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
+
 " Add plugins to &runtimepath
 filetype plugin indent on
 call plug#end()
