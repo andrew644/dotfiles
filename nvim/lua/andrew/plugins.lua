@@ -40,10 +40,13 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+
+	-- Treesitter
+	use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+
+	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -52,6 +55,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use "NLKNguyen/papercolor-theme" -- Papercolor theme
 
+	-- LSP
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',

@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -19,14 +17,13 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 
--- Normal --
 -- move up and down through word wrapped lines
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
--- Insert --
+-- Keep cursor in place when using J
+keymap("n", "J", "mzJ`z", opts)
 
--- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -37,15 +34,22 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- Don't overwrite buffer when put is called
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
+-- Yank into system clipboard
+--keymap("n", "<leader>y", [["+y]], opts)
+--keymap("v", "<leader>y", [["+y]], opts)
+--keymap("n", "<leader>Y", [["+Y]], opts)
 
+-- Disable Q
+keymap("n", "Q", "<nop>", opts)
+
+-- Replace current word
+keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
 -- Telescope --
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
