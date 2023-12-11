@@ -1,6 +1,4 @@
 local opts = { noremap = true, silent = true }
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
@@ -50,8 +48,3 @@ keymap("n", "Q", "<nop>", opts)
 
 -- Replace current word
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
-
--- Telescope --
-keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
---keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)

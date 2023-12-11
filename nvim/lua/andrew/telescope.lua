@@ -94,3 +94,10 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
+--keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
