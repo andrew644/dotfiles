@@ -13,3 +13,4 @@ toggle light mode dark mode
 toggle spell check
 check legacy config for missing stuff
 fix hanging issue
+show whitespace
