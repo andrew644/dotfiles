@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+	  <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -71,22 +72,40 @@
     ];
   };
 
+  home-manager.users.andrew = {
+	  imports = [ ./home.nix ];
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    kitty
-    neovim
+    #wayland stuff
     wofi
     waybar
 	swww
-    waypaper
+
+    kitty
+
+    neovim
     git
+	wget
     ripgrep
     fd
+	htop
+
+	#C
+	gcc
+
+    #Rust
+	rustc
+	cargo
   ];
+
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hack" "Meslo" ]; })

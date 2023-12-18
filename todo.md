@@ -3,9 +3,6 @@ TODO
 Add git config to a file / install script
 
 
-
-
-
 vim
 
 Add config for my own setting for vim-which-key
@@ -14,3 +11,8 @@ toggle spell check
 check legacy config for missing stuff
 fix hanging issue
 show whitespace
+
+
+hyprland config in nixos
+waybar config in nixos
+
