@@ -1,8 +1,5 @@
 TODO
 
-Add git config to a file / install script
-
-
 vim
 
 Add config for my own setting for vim-which-key
@@ -16,3 +13,4 @@ show whitespace
 hyprland config in nixos
 waybar config in nixos
 
+zsh prompt in nixos
