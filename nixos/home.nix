@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
 	imports = [
@@ -18,8 +18,13 @@
 		enable = true;
 	};
 
+	programs.kitty =
+	{
+		enable = true;
+		theme = "PaperColor Dark";
+	};
+
 	home.stateVersion = "23.11";
 
 	programs.home-manager.enable = true;
 }
-
