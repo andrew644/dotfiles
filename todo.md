@@ -12,5 +12,3 @@ show whitespace
 
 hyprland config in nixos
 waybar config in nixos
-
-zsh prompt in nixos

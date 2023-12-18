@@ -22,6 +22,7 @@
 	{
 		enable = true;
 		theme = "PaperColor Dark";
+		font.name = "Meslo";
 	};
 
 	home.stateVersion = "23.11";
