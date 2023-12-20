@@ -3,6 +3,8 @@
 {
 	imports = [
 		./zsh.nix
+		./waybar.nix
+		#./hyprland.nix
 	];
 	home.username = "andrew";
 	home.homeDirectory = "/home/andrew";

@@ -29,3 +29,4 @@ screen locking / screensaver?
 hyprland:
 shortcuts for brightness / volume
 touchpad sensitivity
+fullscreen

@@ -69,6 +69,7 @@
     packages = with pkgs; [
       firefox
       neofetch
+	  discord
     ];
   };
 
@@ -86,6 +87,7 @@
     wofi
     waybar
 	swww
+	networkmanagerapplet
 
     kitty
 
