@@ -12,17 +12,13 @@ x in visual mode not working
 
 migrate config to nix:
 hyprland
-waybar
 neovim
 wofi
 
 nixos setup:
-waybar
 clipboard manager / with vim
 notifications
-discord? / webcam
 spotify / lyrics
-wifi manager
 wofi
 screen locking / screensaver?
 
@@ -30,3 +26,18 @@ hyprland:
 shortcuts for brightness / volume
 touchpad sensitivity
 fullscreen
+
+waybar:
+css
+time format / tooltip calendar?
+battery icon
+remove window name
+make wifi icon better?
+
+appearance:
+waybar
+wallpaper
+firefox
+wofi
+hyprland highlight color
+vim -> weird green color for added lines
