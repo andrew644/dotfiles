@@ -4,6 +4,7 @@
 	imports = [
 		./zsh.nix
 		./waybar.nix
+		./swaylock.nix
 		#./hyprland.nix
 	];
 	home.username = "andrew";

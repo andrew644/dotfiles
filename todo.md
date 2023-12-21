@@ -20,7 +20,7 @@ clipboard manager / with vim
 notifications
 spotify / lyrics
 wofi
-screen locking / screensaver?
+swaylock idle
 
 hyprland:
 shortcuts for brightness / volume

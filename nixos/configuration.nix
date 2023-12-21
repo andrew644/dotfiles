@@ -80,6 +80,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #Fix for swaylock not working - https://github.com/NixOS/nixpkgs/issues/158025
+  security.pam.services.swaylock = {}; 
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -88,6 +91,7 @@
     waybar
 	swww
 	networkmanagerapplet
+	swaylock
 
     kitty
 
