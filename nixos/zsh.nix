@@ -2,6 +2,7 @@
 
 {
 	programs.zsh = {
+		enable = true;
 		autocd = true;
 		enableAutosuggestions = true;
 		enableCompletion = true;
@@ -10,9 +11,14 @@
 			ls = "ls --color=auto";
 			ll = "ls -la --color=auto";
 			la = "ls -la --color=auto";
+
 			vim = "nvim";
 			vi = "nvim";
 			v = "nvim";
+
+			shutdown = "sudo shutdown -h now";
+			reboot = "sudo shutdown -r now";
+			restart = "sudo shutdown -r now";
 		};
 		initExtra = ''
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}["

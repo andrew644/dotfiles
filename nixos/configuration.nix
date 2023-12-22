@@ -70,6 +70,7 @@
       firefox
       neofetch
 	  discord
+	  spotify
     ];
   };
 
@@ -92,6 +93,7 @@
 	swww
 	networkmanagerapplet
 	swaylock
+	swaynotificationcenter
 
     kitty
 

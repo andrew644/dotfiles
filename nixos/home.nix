@@ -7,6 +7,14 @@
 		./swaylock.nix
 		#./hyprland.nix
 	];
+
+	home.file.".config/hypr/hyprland.conf".source = ../hyprland/hyprland.conf;
+
+	home.file.".config/nvim" = {
+		source = ../nvim;
+		recursive = true;
+	};
+
 	home.username = "andrew";
 	home.homeDirectory = "/home/andrew";
 
@@ -15,10 +23,6 @@
 		userName = "andrew644";
 		userEmail = "andrew644@users.noreply.github.com";
 		#TODO Add push mode 
-	};
-
-	programs.zsh = {
-		enable = true;
 	};
 
 	programs.kitty =
