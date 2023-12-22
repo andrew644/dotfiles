@@ -5,6 +5,7 @@
 		./zsh.nix
 		./waybar.nix
 		./swaylock.nix
+		./wofi.nix
 		#./hyprland.nix
 	];
 

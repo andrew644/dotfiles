@@ -94,6 +94,8 @@
 	networkmanagerapplet
 	swaylock
 	swaynotificationcenter
+	wev #keycode display
+	brightnessctl
 
     kitty
 

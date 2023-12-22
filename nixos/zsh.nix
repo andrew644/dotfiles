@@ -19,6 +19,8 @@
 			shutdown = "sudo shutdown -h now";
 			reboot = "sudo shutdown -r now";
 			restart = "sudo shutdown -r now";
+
+			switch = "sudo nixos-rebuild switch";
 		};
 		initExtra = ''
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}["
