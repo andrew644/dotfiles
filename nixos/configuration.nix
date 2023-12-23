@@ -105,6 +105,7 @@
     ripgrep
     fd
 	htop
+	killall
 
 	#C
 	gcc

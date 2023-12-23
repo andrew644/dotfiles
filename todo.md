@@ -12,20 +12,13 @@ gramarly - setup node
 nixos setup:
 clipboard manager / with vim
 spotify terminal with lyrics
-wofi
 swaylock idle
 
 hyprland:
 touchpad sensitivity
 fullscreen
 
-waybar:
-css
-make wifi icon better?
-
 appearance:
-waybar
-wallpaper
 firefox
 hyprland highlight color
 vim -> weird green color for added lines
