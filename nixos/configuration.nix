@@ -112,6 +112,7 @@
 
     #Rust
 	rustc
+	rust-analyzer
 	cargo
   ];
 

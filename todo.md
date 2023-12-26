@@ -23,3 +23,4 @@ firefox
 hyprland highlight color
 vim -> weird green color for added lines
 swaync
+fix dropdown menus for tray icons
