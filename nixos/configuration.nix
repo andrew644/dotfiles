@@ -106,9 +106,15 @@
     fd
 	htop
 	killall
+	unzip
 
-	#C
+	#Dev
 	gcc
+	gnumake
+	cmake
+	ninja
+	clang
+	clang-tools
 
     #Rust
 	rustc

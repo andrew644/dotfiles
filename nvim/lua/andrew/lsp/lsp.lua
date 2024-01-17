@@ -30,6 +30,11 @@ require('mason-lspconfig').setup({
 				cmd = { 'rust-analyzer' },
 			})
 		end,
+		clangd = function()
+			require('lspconfig').clangd.setup({
+				cmd = { 'clangd' },
+			})
+		end,
 	}
 })
 
@@ -52,3 +57,4 @@ cmp.setup({
 })
 
 require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').clangd.setup({})
