@@ -112,6 +112,7 @@
 	gcc
 	gnumake
 	cmake
+	meson
 	ninja
 	clang
 	clang-tools
