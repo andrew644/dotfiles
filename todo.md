@@ -12,7 +12,6 @@ show trailing whitespace automatically when no currently typing
 nixos setup:
 spotify terminal with lyrics
 swaylock idle
-fix formatting of .nix files
 
 hyprland:
 touchpad sensitivity
