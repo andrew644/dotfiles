@@ -10,9 +10,9 @@ setup mason - require zig/rust/c/nix (whatever is already installed)
 gramarly - setup node
 
 nixos setup:
-clipboard manager / with vim
 spotify terminal with lyrics
 swaylock idle
+fix formatting of .nix files
 
 hyprland:
 touchpad sensitivity
@@ -20,7 +20,8 @@ fullscreen
 
 appearance:
 firefox
-hyprland highlight color
+hyprland window highlight color
 vim -> weird green color for added lines
 swaync
 fix dropdown menus for tray icons
+better tray icons

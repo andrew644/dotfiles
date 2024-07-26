@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -11,7 +11,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "sl3"; # Define your hostname.
+  boot.supportedFilesystems = [ "ntfs" ];
+
+  networking.hostName = "andrew_desktop"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -69,7 +71,7 @@
     packages = with pkgs; [
       firefox
       neofetch
-	  discord
+	  #discord
 	  spotify
     ];
   };
@@ -96,8 +98,11 @@
 	swaynotificationcenter
 	wev #keycode display
 	brightnessctl
+	wl-clipboard #copy and paste into vim
 
     kitty
+
+	vesktop #discord app
 
     neovim
     git
@@ -130,6 +135,20 @@
     (nerdfonts.override { fonts = [ "Hack" "Meslo" ]; })
   ];
 
+  #Nvidia
+  hardware.opengl.enable = true;
+
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+	powerManagement.enable = false;
+	powerManagement.finegrained = false;
+	open = false;
+	nvidiaSettings = true;
+	package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -155,6 +174,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
