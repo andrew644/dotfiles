@@ -2,7 +2,6 @@ TODO
 
 vim:
 Add config for my own setting for vim-which-key
-toggle light mode dark mode
 check legacy config for missing stuff
 setup mason - require zig/rust/c/nix (whatever is already installed)
 gramarly - setup node

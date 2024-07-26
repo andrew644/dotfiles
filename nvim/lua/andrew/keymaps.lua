@@ -61,3 +61,6 @@ keymap("n", "<F1>", ":set spell!<CR>", opts)
 
 -- Toggle show whitespace
 keymap("n", "<F2>", ":set list!<CR>", opts)
+
+-- Toggle light/dark mode
+keymap("n", "<F3>", ":let &background = ( &background == 'dark' ? 'light' : 'dark' )<CR>", opts)
