@@ -11,6 +11,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   networking.hostName = "andrew_desktop"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -69,7 +71,7 @@
     packages = with pkgs; [
       firefox
       neofetch
-	  discord
+	  #discord
 	  spotify
     ];
   };
@@ -96,8 +98,11 @@
 	swaynotificationcenter
 	wev #keycode display
 	brightnessctl
+	wl-clipboard #copy and paste into vim
 
     kitty
+
+	vesktop #discord app
 
     neovim
     git
