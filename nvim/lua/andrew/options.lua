@@ -41,3 +41,12 @@ for k, v in pairs(options) do
 end
 
 vim.opt.shortmess:append "c"
+
+vim.opt.listchars = {
+	tab = '▸-',         -- Character for tab
+	eol = '↲',          -- Character for end of line
+	trail = '•',        -- Character for trailing spaces
+	extends = '»',      -- Character for lines that extend beyond the window
+	precedes = '«',     -- Character for lines that precede the window
+	nbsp = '¬'          -- Character for non-breaking spaces
+}

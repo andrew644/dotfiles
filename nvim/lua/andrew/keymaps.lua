@@ -55,3 +55,6 @@ keymap("n", "Q", "<nop>", opts)
 
 -- Replace current word
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+
+-- Toggle show whitespace
+keymap("n", "<F2>", ":set list!<CR>", opts)
