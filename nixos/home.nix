@@ -6,7 +6,6 @@
 		./waybar.nix
 		./swaylock.nix
 		./wofi.nix
-		#./hyprland.nix
 	];
 
 	home.file.".config/hypr/hyprland.conf".source = ../hyprland/hyprland.conf;

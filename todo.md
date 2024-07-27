@@ -6,6 +6,8 @@ check legacy config for missing stuff
 setup mason - require zig/rust/c/nix (whatever is already installed)
 gramarly - setup node
 show trailing whitespace automatically when no currently typing
+show markdown file
+debug c++ file?
 
 nixos setup:
 spotify terminal with lyrics
@@ -15,6 +17,10 @@ hyprland:
 touchpad sensitivity
 fullscreen
 
+gaming:
+steam
+dota2
+
 appearance:
 firefox
 hyprland window highlight color
@@ -23,3 +29,4 @@ swaync
 fix dropdown menus for tray icons
 better tray icons
 speaker icon not fitting-in box
+switch to hyprlock

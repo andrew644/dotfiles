@@ -71,6 +71,8 @@
 		];
 	};
 
+	programs.steam.enable = true;
+
 	home-manager.users.andrew = {
 		imports = [ ./home.nix ];
 	};
