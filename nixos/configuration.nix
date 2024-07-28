@@ -36,11 +36,6 @@
 		LC_TIME = "en_US.UTF-8";
 	};
 
-	programs.hyprland.enable = true;
-
-	# Enable CUPS to print documents.
-	#services.printing.enable = true;
-
 	# Enable sound with pipewire.
 	sound.enable = true;
 	hardware.pulseaudio.enable = false;
@@ -66,7 +61,6 @@
 		packages = with pkgs; [
 			firefox
 			neofetch
-			#discord
 			spotify
 		];
 	};
@@ -80,22 +74,13 @@
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 
-	#Fix for swaylock not working - https://github.com/NixOS/nixpkgs/issues/158025
-	security.pam.services.swaylock = {};
-
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-		#wayland stuff
-		wofi
-		waybar
-		swww
-		networkmanagerapplet
-		swaylock
-		swaynotificationcenter
+		#WM tools
+		rofi
 		wev #keycode display
-		brightnessctl
-		wl-clipboard #copy and paste into vim
+		arandr
 
 		kitty
 
@@ -125,6 +110,18 @@
 		cargo
 	];
 
+	services.xserver = {
+		enable = true;
+
+		windowManager.awesome = {
+			enable = true;
+			luaModules = with pkgs.luaPackages; [
+				luarocks # package manager for lua
+				luadbi-mysql
+			];
+		};
+	};
+
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
 
@@ -135,7 +132,7 @@
 	#Nvidia
 	hardware.opengl.enable = true;
 
-	services.xserver.videoDrivers = ["nvidia"];
+	services.xserver.videoDrivers = [ "nvidia" ];
 
 	hardware.nvidia = {
 		modesetting.enable = true;

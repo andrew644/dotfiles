@@ -2,7 +2,7 @@
 
 {
 	programs.swaylock = {
-		enable = true;
+		enable = false;
 		settings = {
 			color = "001223";
 			show-failed-attempts = true;
