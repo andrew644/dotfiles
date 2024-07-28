@@ -81,6 +81,7 @@
 		rofi
 		wev #keycode display
 		arandr
+		xclip
 
 		kitty
 

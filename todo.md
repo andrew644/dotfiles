@@ -10,8 +10,12 @@ show markdown file
 debug c++ file?
 
 nixos setup:
+link .xinitrc with .nix
+link awesome rc.lua with .nix
 spotify terminal with lyrics
 swaylock idle
+
+
 
 hyprland:
 touchpad sensitivity
