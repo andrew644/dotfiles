@@ -63,6 +63,7 @@
 			neofetch
 			fastfetch
 			spotify
+			sptlrx #spotify lyrics in terminal
 		];
 	};
 
@@ -80,11 +81,11 @@
 	environment.systemPackages = with pkgs; [
 		#WM tools
 		rofi #app launcher
-		wev #keycode display
 		arandr #gui xrandr
 		xclip #clipboard support for vim
 		i3lock #screen lock
 		libnotify #send notifications with notify-send
+		playerctl #control media and get metadata
 
 		kitty #terminal
 
@@ -107,6 +108,7 @@
 		ninja #c++ build tool
 		clang
 		clang-tools
+		gdb
 
 		#Rust
 		rustc
