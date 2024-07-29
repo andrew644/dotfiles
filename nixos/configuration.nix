@@ -61,6 +61,7 @@
 		packages = with pkgs; [
 			firefox
 			neofetch
+			fastfetch
 			spotify
 		];
 	};
@@ -78,20 +79,22 @@
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
 		#WM tools
-		rofi
+		rofi #app launcher
 		wev #keycode display
-		arandr
-		xclip
+		arandr #gui xrandr
+		xclip #clipboard support for vim
+		i3lock #screen lock
+		libnotify #send notifications with notify-send
 
-		kitty
+		kitty #terminal
 
 		vesktop #discord app
 
 		neovim
 		git
 		wget
-		ripgrep
-		fd
+		ripgrep #faster grep
+		fd #find alternative
 		htop
 		killall
 		unzip
@@ -100,8 +103,8 @@
 		gcc
 		gnumake
 		cmake
-		meson
-		ninja
+		meson #c++ build tool
+		ninja #c++ build tool
 		clang
 		clang-tools
 
@@ -114,6 +117,9 @@
 	services.xserver = {
 		enable = true;
 
+		displayManager.lightdm.enable = false;
+		displayManager.startx.enable = true;
+
 		windowManager.awesome = {
 			enable = true;
 			luaModules = with pkgs.luaPackages; [
@@ -122,6 +128,8 @@
 			];
 		};
 	};
+
+	services.libinput.mouse.accelProfile = "flat";
 
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;

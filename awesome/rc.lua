@@ -1,3 +1,6 @@
+-- Hide tmux keys in help menu
+package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -48,7 +51,7 @@ end
 -- {{{ Variable definitions
 -- @DOC_LOAD_THEME@
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
 
 -- @DOC_DEFAULT_APPLICATIONS@
 -- This is used later as the default terminal and editor to run.
@@ -84,6 +87,9 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.se,
 }
 -- }}}
+
+local primary_screen = screen.primary
+naughty.config.defaults.screen = primary_screen
 
 -- {{{ Menu
 -- @DOC_MENU@
@@ -325,6 +331,16 @@ globalkeys = gears.table.join(
     -- Prompt
     awful.key({ modkey },            "d",     function () awful.util.spawn("rofi -show drun") end,
               {description = "run prompt", group = "launcher"}),
+
+    awful.key({ modkey, "Shift" },            "x",     function () awful.util.spawn("i3lock --color 2D2F38") end,
+              {description = "lock screen", group = "awesome"}),
+
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+") end,
+              {description = "vol+", group = "media"}),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-") end,
+              {description = "vol-", group = "media"}),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") end,
+              {description = "mute", group = "media"}),
 
     awful.key({ modkey }, "x",
               function ()

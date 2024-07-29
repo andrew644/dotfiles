@@ -13,24 +13,14 @@ nixos setup:
 link .xinitrc with .nix
 link awesome rc.lua with .nix
 spotify terminal with lyrics
-swaylock idle
 
-
-
-hyprland:
-touchpad sensitivity
-fullscreen
-
-gaming:
-steam
-dota2
+awesome
+lock screen on idle
+turn off screen after time
+notifications
+better tray icons
+speaker icon tray icon
 
 appearance:
 firefox
-hyprland window highlight color
 vim -> weird green color for added lines
-swaync
-fix dropdown menus for tray icons
-better tray icons
-speaker icon not fitting-in box
-switch to hyprlock
