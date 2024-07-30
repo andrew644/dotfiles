@@ -6,7 +6,7 @@ dapui.setup()
 
 dap.adapters.lldb = {
 	type = 'executable',
-	command = '/run/current-system/sw/bin/lldb-dap',
+	command = 'lldb-dap',
 	name = 'lldb'
 }
 
