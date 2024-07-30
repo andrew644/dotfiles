@@ -91,6 +91,16 @@ return packer.startup(function(use)
 		}
 	}
 
+	-- Debug
+	use {
+		'mfussenegger/nvim-dap',
+		requires = {
+			{ 'rcarriga/nvim-dap-ui' },
+			{ 'nvim-neotest/nvim-nio' },
+			{ 'ldelossa/nvim-dap-projects' },
+		}
+	}
+
 	-- Harpoon
 	use {
 		"ThePrimeagen/harpoon",

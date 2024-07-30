@@ -108,7 +108,10 @@
 		ninja #c++ build tool
 		clang
 		clang-tools
+		scons
 		gdb
+		lldb_18
+		godot_4
 
 		#Rust
 		rustc

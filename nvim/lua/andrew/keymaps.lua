@@ -45,11 +45,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Yank into system clipboard
---keymap("n", "<leader>y", [["+y]], opts)
---keymap("v", "<leader>y", [["+y]], opts)
---keymap("n", "<leader>Y", [["+Y]], opts)
-
 -- Disable Q
 keymap("n", "Q", "<nop>", opts)
 
