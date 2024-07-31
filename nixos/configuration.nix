@@ -94,6 +94,7 @@
 		neovim
 		git
 		wget
+		file
 		ripgrep #faster grep
 		fd #find alternative
 		htop

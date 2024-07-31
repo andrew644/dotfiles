@@ -30,3 +30,9 @@ sudo mount /dev/sda1 ~/mount/usb
 
 # NTFS file systems
 sudo mount -t ntfs-3g /dev/sdb1 ~/mount/usb
+
+
+# file command
+file ./path/to/binary
+
+output will tell info about file and if it has debug symbols
