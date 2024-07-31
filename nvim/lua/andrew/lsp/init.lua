@@ -4,5 +4,3 @@ if not status_ok then
 end
 
 require "andrew.lsp.lsp"
---require "andrew.lsp.mason"
---require("andrew.lsp.handlers").setup()

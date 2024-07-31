@@ -113,6 +113,7 @@
 		gdb
 		lldb_18
 		godot_4
+		bear # generate compile_commands.json for c++ autocomplete
 
 		#Rust
 		rustc
