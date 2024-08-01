@@ -318,9 +318,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" },            "x",     function () awful.util.spawn("i3lock --color 2D2F38") end,
               {description = "lock screen", group = "awesome"}),
 
-    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+") end,
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 10%+") end,
               {description = "vol+", group = "media"}),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-") end,
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 10%-") end,
               {description = "vol-", group = "media"}),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") end,
               {description = "mute", group = "media"}),
