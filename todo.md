@@ -17,7 +17,7 @@ spotify terminal with lyrics
 #awesome
 theme
 lock screen on idle
-turn off screen after time
+turn off screen after time - figure out how to control this. It already does this. From an xfce package?
 better tray icons
 speaker icon and volume
 current song status / playing media status
@@ -28,3 +28,4 @@ shortcut to skip/back all media
 #appearance
 firefox
 vim -> weird green color for added lines
+rofi

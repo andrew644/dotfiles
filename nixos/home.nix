@@ -28,7 +28,8 @@
 	programs.kitty =
 	{
 		enable = true;
-		theme = "PaperColor Dark";
+		#theme = "PaperColor Dark";
+		theme = "Kanagawa";
 		font.name = "Meslo";
 	};
 
