@@ -3,7 +3,6 @@
 #vim
 Add config for my own setting for vim-which-key
 check legacy config for missing stuff
-setup mason - require zig/rust/c/nix (whatever is already installed)
 gramarly - setup node
 show trailing whitespace automatically when no currently typing
 show markdown file
@@ -12,6 +11,8 @@ show markdown file
 link .xinitrc with .nix
 link awesome rc.lua with .nix
 link mytheme.lua with .nix
+link rofi config with .nix
+link picom.conf with .nix
 spotify terminal with lyrics
 
 #awesome
@@ -24,8 +25,10 @@ current song status / playing media status
 calendar when pressing date
 shortcut to pause/play all media
 shortcut to skip/back all media
+active window 100% opacity - not selected window 80% - key to turn on and off
+gaps - configurable
 
 #appearance
 firefox
-vim -> weird green color for added lines
+vim
 rofi

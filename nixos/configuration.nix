@@ -86,6 +86,7 @@
 		i3lock #screen lock
 		libnotify #send notifications with notify-send
 		playerctl #control media and get metadata
+		picom
 
 		kitty #terminal
 
