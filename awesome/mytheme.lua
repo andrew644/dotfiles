@@ -138,7 +138,11 @@ theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/m
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
 --theme.wallpaper = "~/wallpaper/duck.jpg"
-theme.wallpaper = "~/wallpaper/space1.png"
+--theme.wallpaper = "~/wallpaper/space1.png"
+--theme.wallpaper = "~/wallpaper/a_colorful_swirls_of_paint.jpg"
+--theme.wallpaper = "~/wallpaper/purple_circle.jpg"
+--theme.wallpaper = "~/wallpaper/nix.png"
+theme.wallpaper = "~/wallpaper/gift.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

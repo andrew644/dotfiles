@@ -25,10 +25,12 @@ current song status / playing media status
 calendar when pressing date
 shortcut to pause/play all media
 shortcut to skip/back all media
-active window 100% opacity - not selected window 80% - key to turn on and off
 gaps - configurable
 
 #appearance
 firefox
 vim
 rofi
+
+#zsh
+unified history

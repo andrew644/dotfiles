@@ -89,6 +89,7 @@
 		picom
 
 		kitty #terminal
+		yazi #file manager
 
 		vesktop #discord app
 

@@ -199,7 +199,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- @DOC_WIBAR@
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "bottom", screen = s, opacity = 0.7 })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s, opacity = 0.85 })
 
     -- @DOC_SETUP_WIDGETS@
     -- Add widgets to the wibox
@@ -324,6 +324,12 @@ globalkeys = gears.table.join(
               {description = "vol-", group = "media"}),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") end,
               {description = "mute", group = "media"}),
+    awful.key({}, "XF86AudioStop", function () awful.util.spawn("playerctl -a play-pause") end,
+              {description = "play/pause all", group = "media"}),
+    awful.key({}, "XF86AudioNext", function () awful.util.spawn("playerctl -a next") end,
+              {description = "Next song", group = "media"}),
+    awful.key({}, "XF86AudioPrev", function () awful.util.spawn("playerctl -a previous") end,
+              {description = "Prev song", group = "media"}),
 
     awful.key({ modkey }, "x",
               function ()
