@@ -64,6 +64,8 @@
 			fastfetch
 			spotify
 			sptlrx #spotify lyrics in terminal
+			veracrypt
+			mpv
 		];
 	};
 
