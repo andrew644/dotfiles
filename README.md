@@ -36,3 +36,7 @@ sudo mount -t ntfs-3g /dev/sdb1 ~/mount/usb
 file ./path/to/binary
 
 output will tell info about file and if it has debug symbols
+
+# Audio
+wpctl status
+wpctl set-default 60

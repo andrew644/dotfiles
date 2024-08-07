@@ -66,6 +66,7 @@
 			sptlrx #spotify lyrics in terminal
 			veracrypt
 			mpv
+			yt-dlp
 		];
 	};
 
@@ -89,6 +90,8 @@
 		libnotify #send notifications with notify-send
 		playerctl #control media and get metadata
 		picom
+		nitrogen #wallpaper manager for x11
+		dunst #notifications
 
 		kitty #terminal
 		yazi #file manager
@@ -136,6 +139,14 @@
 			luaModules = with pkgs.luaPackages; [
 				luarocks # package manager for lua
 				luadbi-mysql
+			];
+		};
+
+		windowManager.i3 = {
+			enable = true;
+			package = pkgs.i3-gaps;
+			extraPackages = with pkgs; [
+				i3status
 			];
 		};
 	};

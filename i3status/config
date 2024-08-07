@@ -1,0 +1,20 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 10
+}
+
+order += "volume master"
+order += "tztime local"
+
+tztime local {
+    format = " %Y-%m-%d  %H:%M "
+}
+
+volume master {
+    format = " ♪ %volume "
+    format_muted = " x♪ %volume "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}

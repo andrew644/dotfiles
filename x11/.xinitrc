@@ -2,6 +2,7 @@
 
 . ~/dotfiles/scripts/set_resolution.sh
 
-picom &
+#picom &
 
-exec awesome
+#exec awesome
+exec i3

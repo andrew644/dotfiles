@@ -13,6 +13,7 @@ link awesome rc.lua with .nix
 link mytheme.lua with .nix
 link rofi config with .nix
 link picom.conf with .nix
+link i3 and i3status config with .nix
 spotify terminal with lyrics
 
 #awesome
