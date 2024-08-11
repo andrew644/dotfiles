@@ -29,7 +29,8 @@
 	{
 		enable = true;
 		#theme = "PaperColor Dark";
-		theme = "Kanagawa";
+		#theme = "Kanagawa";
+		theme = "Tokyo Night Moon";
 		font.name = "Meslo";
 	};
 

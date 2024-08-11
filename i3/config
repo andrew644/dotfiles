@@ -112,16 +112,16 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $w1 "1:一"
-set $w2 "2:二"
-set $w3 "3:三"
-set $w4 "4:四"
-set $w5 "5:五"
-set $w6 "6:六"
-set $w7 "7:七"
-set $w8 "8:八"
-set $w9 "9:九"
-set $w0 "10:十"
+set $w1 "1:1"
+set $w2 "2:2"
+set $w3 "3:3"
+set $w4 "4:4"
+set $w5 "5:5"
+set $w6 "6:6"
+set $w7 "7:7"
+set $w8 "8:8"
+set $w9 "9:9"
+set $w0 "10:10"
 
 workspace $w1 output DP-0
 workspace $w2 output DP-0
@@ -168,7 +168,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+Shift+x exec i3lock --color 475263
+bindsym $mod+Shift+x exec i3lock --color 1a1b26
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -196,22 +196,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $border              #7e9cd8
-set $focused             #54546D
-set $unfocused           #c8c093
-set $bg-color            #2b232b
-set $inactive-bg-color   #393838
-set $text-color          #dcd7ba
-set $inactive-text-color #727169
-set $urgent-bg-color     #c34043
-set $indicator-color     #76946a
-set $separator           #7e9cd8
+set $border              #7aa2f7
+set $focused             #7aa2f7
+set $unfocused           #24283b
+set $bg-color            #24283b
+set $inactive-bg-color   #1a1b26
+set $text-color          #7aa2f7
+set $selected-text-color #24283b
+set $urgent-bg-color     #f7768e
+set $indicator-color     #1a1b26
+set $separator           #7aa2f7
 
 # set window colors
 #                       border             background         text                 indicator
 client.focused          $focused           $focused           $text-color          $indicator-color
-client.unfocused        $unfocused         $unfocused         $inactive-text-color $indicator-color
-client.focused_inactive $unfocused         $unfocused         $inactive-text-color $indicator-color
+client.unfocused        $unfocused         $unfocused         $text-color          $indicator-color
+client.focused_inactive $unfocused         $unfocused         $text-color          $indicator-color
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
 
 
@@ -229,9 +229,9 @@ bar {
         separator  $separator
         statusline $text-color
         #                  border             background         text
-        focused_workspace  $border            $focused           $text-color
-        inactive_workspace $unfocused         $unfocused         $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+        focused_workspace  $border            $focused           $selected-text-color
+        inactive_workspace $unfocused         $unfocused         $text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $selected-text-color
     }
 }
 

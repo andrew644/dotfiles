@@ -49,7 +49,7 @@ git_custom_status() {
 RPS1='$(git_custom_status) $EPS1'
 
 setopt PROMPT_SUBST
-PROMPT='%K{magenta}$(printf " %.0s" $(seq 1 $(tput cols)))%k
+PROMPT='%K{8}$(printf " %.0s" $(seq 1 $(tput cols)))%k
 %F{red}%(?,,X%? )%f%T  %F{blue}%~%f  
 λ '
 		'';

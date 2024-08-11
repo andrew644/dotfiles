@@ -1,4 +1,6 @@
 --local colorscheme = "PaperColor"
+local colorscheme = "tokyonight-moon"
+--[[
 local colorscheme = "kanagawa"
 
 require('kanagawa').setup({
@@ -25,6 +27,7 @@ require('kanagawa').setup({
 		light = "lotus"
 	},
 })
+--]]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

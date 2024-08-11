@@ -67,6 +67,7 @@
 			veracrypt
 			mpv
 			yt-dlp
+			ffmpeg
 		];
 	};
 

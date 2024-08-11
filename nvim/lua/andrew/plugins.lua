@@ -67,6 +67,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use "NLKNguyen/papercolor-theme" -- Papercolor theme
 	use "rebelot/kanagawa.nvim" -- kanagawa theme
+	use "folke/tokyonight.nvim" -- kanagawa theme
 
 	-- LSP
 	use {
