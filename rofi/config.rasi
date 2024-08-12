@@ -11,35 +11,35 @@ configuration {
 }
 
 * {
-    selected-normal-foreground:  #DCD7BA;  /* fujiWhite */
-    foreground:                  #7AA89F;  /* waveAqua2 */
+    selected-normal-foreground:  #24283b;
+    foreground:                  #7aa2f7;
     normal-foreground:           @foreground;
-    alternate-normal-background: #2A2A37;  /* sumiInk2 */
-    red:                         #E82424;  /* samuraiRed */
-    selected-urgent-foreground:  #DCD7BA;  /* fujiWhite */
-    blue:                        #7E9CD8;  /* crystalBlue */
-    urgent-foreground:           #FF9E3B;  /* roninYellow */
-    alternate-urgent-background: #2A2A37;  /* sumiInk2 */
-    active-foreground:           #98BB6C;  /* springGreen */
-    lightbg:                     #54546D;  /* sumiInk4 */
-    selected-active-foreground:  #DCD7BA;  /* fujiWhite */
-    alternate-active-background: #2A2A37;  /* sumiInk2 */
-    background:                  #1F1F28;  /* sumiInk1 */
-    bordercolor:                 #7AA89F;  /* waveAqua2 */
+    alternate-normal-background: #2A2A37;
+    red:                         #f7768e;
+    selected-urgent-foreground:  #f7768e;
+    blue:                        #f7768e;
+    urgent-foreground:           #f7768e;
+    alternate-urgent-background: #f7768e;
+    active-foreground:           #f7768e;
+    lightbg:                     #f7768e;
+    selected-active-foreground:  #f7768e;
+    alternate-active-background: #f7768e;
+    background:                  #1F1F28;
+    bordercolor:                 #7aa2f7;
     alternate-normal-foreground: @foreground;
-    normal-background:           #16161D;  /* sumiInk0 */
-    lightfg:                     #727169;  /* fujiGray */
-    selected-normal-background:  #7AA89F;  /* waveAqua2 */
+    normal-background:           #1a1b26;
+    lightfg:                     #f7768e;
+    selected-normal-background:  #7aa2f7;
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              #7AA89F;  /* waveAqua2 */
-    urgent-background:           #16161D;  /* sumiInk0 */
-    selected-urgent-background:  #FF9E3B;  /* roninYellow */
+    separatorcolor:              #7aa2f7;
+    urgent-background:           #7aa2f7;
+    selected-urgent-background:  #7aa2f7;
     alternate-urgent-foreground: @urgent-foreground;
-    background-color:            #16161D;  /* sumiInk0 */
+    background-color:            #1a1b26;
     alternate-active-foreground: @active-foreground;
-    active-background:           #16161D;  /* sumiInk0 */
-    selected-active-background:  #98BB6C;  /* springGreen */
+    active-background:           #1a1b26;
+    selected-active-background:  #1a1b26;
 }
 
 window {

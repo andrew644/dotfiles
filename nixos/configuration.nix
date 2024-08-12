@@ -68,6 +68,7 @@
 			mpv
 			yt-dlp
 			ffmpeg
+			protonplus
 		];
 	};
 
