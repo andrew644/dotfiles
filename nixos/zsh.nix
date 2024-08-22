@@ -9,8 +9,8 @@
 		syntaxHighlighting.enable = true;
 		shellAliases = {
 			ls = "ls --color=auto";
-			ll = "ls -la --color=auto";
-			la = "ls -la --color=auto";
+			ll = "ls -lah --color=auto";
+			la = "ls -lah --color=auto";
 
 			vim = "nvim";
 			vi = "nvim";

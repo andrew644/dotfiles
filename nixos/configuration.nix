@@ -69,6 +69,7 @@
 			yt-dlp
 			ffmpeg
 			protonplus
+			xfce.thunar # file manager
 		];
 	};
 
@@ -94,6 +95,7 @@
 		picom
 		nitrogen #wallpaper manager for x11
 		dunst #notifications
+		feh # image viewer
 
 		kitty #terminal
 		yazi #file manager
