@@ -57,4 +57,15 @@ cmp.setup({
 })
 
 require('lspconfig').rust_analyzer.setup({})
-require('lspconfig').clangd.setup({})
+require('lspconfig').clangd.setup({
+	on_attach = function(client, bufnr)
+		if client.server_capabilities.documentFormattingProvider then
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({ async = true })
+				end
+			})
+		end
+	end
+})
