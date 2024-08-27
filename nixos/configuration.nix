@@ -109,6 +109,7 @@
 		ripgrep #faster grep
 		fd #find alternative
 		htop
+		btop
 		killall
 		unzip
 
@@ -125,6 +126,7 @@
 		lldb_18
 		godot_4
 		bear # generate compile_commands.json for c++ autocomplete
+		python3
 
 		#Rust
 		rustc
