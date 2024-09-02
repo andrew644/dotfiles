@@ -70,6 +70,7 @@
 			ffmpeg
 			protonplus
 			xfce.thunar # file manager
+			calibre # ebook manager
 		];
 	};
 
