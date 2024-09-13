@@ -8,12 +8,6 @@ show trailing whitespace automatically when no currently typing
 show markdown file
 
 #nixos
-link .xinitrc with .nix
-link awesome rc.lua with .nix
-link mytheme.lua with .nix
-link rofi config with .nix
-link picom.conf with .nix
-link i3 and i3status config with .nix
 spotify terminal with lyrics
 
 #awesome
@@ -28,10 +22,10 @@ shortcut to pause/play all media
 shortcut to skip/back all media
 gaps - configurable
 
+#i3
+switch audio for headphones / speakers with key
+
 #appearance
-firefox
-vim
-rofi
 
 #zsh
 unified history

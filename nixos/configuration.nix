@@ -106,6 +106,7 @@
 		vesktop #discord app
 
 		neovim
+		neovim-remote
 		git
 		wget
 		file
@@ -130,6 +131,7 @@
 		godot_4
 		bear # generate compile_commands.json for c++ autocomplete
 		python3
+		texlive.combined.scheme-full #latex
 
 		#Rust
 		rustc

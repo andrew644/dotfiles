@@ -9,6 +9,12 @@
 	];
 
 	home.file.".config/hypr/hyprland.conf".source = ../hyprland/hyprland.conf;
+	home.file.".xinitrc".source = ../x11/.xinitrc;
+	home.file.".config/rofi/config.rasi".source = ../rofi/config.rasi;
+	home.file.".config/i3/config".source = ../i3/config;
+	home.file.".config/i3status/config".source = ../i3status/config;
+	home.file.".config/picom/picom.conf".source = ../picom/picom.conf;
+	home.file.".config/zathura/zathurarc".source = ../zathura/zathurarc;
 
 	home.file.".config/nvim" = {
 		source = ../nvim;
