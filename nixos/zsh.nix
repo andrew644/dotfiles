@@ -21,6 +21,8 @@
 			restart = "sudo shutdown -r now";
 
 			switch = "sudo nixos-rebuild switch";
+
+			mountwin = "sudo ntfs-3g /dev/nvme0n1p3 ~/mount/windows";
 		};
 		initExtra = ''
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}["
