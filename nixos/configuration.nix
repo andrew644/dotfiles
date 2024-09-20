@@ -139,30 +139,36 @@
 		cargo
 	];
 
-	services.xserver = {
-		enable = true;
 
-		displayManager.lightdm.enable = false;
-		displayManager.startx.enable = true;
-
-		windowManager.awesome = {
+	services = {
+		displayManager.sddm.enable = true;
+		displayManager.sddm.wayland.enable = true;
+		desktopManager.plasma6.enable = true;
+		libinput.mouse.accelProfile = "flat";
+		xserver = {
 			enable = true;
-			luaModules = with pkgs.luaPackages; [
-				luarocks # package manager for lua
-				luadbi-mysql
-			];
-		};
 
-		windowManager.i3 = {
-			enable = true;
-			package = pkgs.i3-gaps;
-			extraPackages = with pkgs; [
-				i3status
-			];
+			videoDrivers = [ "nvidia" ];
+
+			displayManager.startx.enable = true;
+
+			windowManager.awesome = {
+				enable = false;
+				luaModules = with pkgs.luaPackages; [
+					luarocks # package manager for lua
+					luadbi-mysql
+				];
+			};
+
+			windowManager.i3 = {
+				enable = true;
+				package = pkgs.i3-gaps;
+				extraPackages = with pkgs; [
+					i3status
+				];
+			};
 		};
 	};
-
-	services.libinput.mouse.accelProfile = "flat";
 
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
@@ -174,7 +180,6 @@
 	#Nvidia
 	hardware.opengl.enable = true;
 
-	services.xserver.videoDrivers = [ "nvidia" ];
 
 	hardware.nvidia = {
 		modesetting.enable = true;
