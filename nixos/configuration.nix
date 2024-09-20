@@ -65,7 +65,7 @@
 			spotify
 			sptlrx #spotify lyrics in terminal
 			veracrypt
-			mpv
+			mpv #video player
 			yt-dlp
 			ffmpeg
 			protonplus
@@ -73,6 +73,8 @@
 			calibre # ebook manager
 			libreoffice
 			zathura #pdf
+			krita #art
+			gimp #art
 		];
 	};
 
