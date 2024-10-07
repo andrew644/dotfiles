@@ -75,6 +75,7 @@
 			zathura #pdf
 			krita #art
 			gimp #art
+			obs-studio
 		];
 	};
 
@@ -143,9 +144,8 @@
 
 
 	services = {
-		displayManager.sddm.enable = true;
-		displayManager.sddm.wayland.enable = true;
-		desktopManager.plasma6.enable = true;
+		displayManager.sddm.enable = false;
+		desktopManager.plasma6.enable = false;
 		libinput.mouse.accelProfile = "flat";
 		xserver = {
 			enable = true;
