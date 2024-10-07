@@ -144,6 +144,9 @@ return packer.startup(function(use)
 	-- latex
 	use "lervag/vimtex"
 
+	-- Color code highlighter
+	use "norcalli/nvim-colorizer.lua"
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
