@@ -112,6 +112,7 @@
 
 		kitty #terminal
 		yazi #file manager
+		nomacs #image viewer
 
 		vesktop #discord app
 
