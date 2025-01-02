@@ -12,6 +12,10 @@
 			ll = "ls -lah --color=auto";
 			la = "ls -lah --color=auto";
 
+			e = "yazi";
+			i = "nomacs";
+			pdf = "zathura";
+
 			vim = "nvim";
 			vi = "nvim";
 			v = "nvim";

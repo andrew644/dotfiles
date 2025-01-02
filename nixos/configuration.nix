@@ -82,6 +82,7 @@
 			zathura #pdf
 			krita #art
 			gimp #art
+			inkscape-with-extensions #svg art
 			obs-studio
 		];
 	};
@@ -148,6 +149,9 @@
 		rustc
 		rust-analyzer
 		cargo
+
+		#webdev
+		nodejs_22
 	];
 
 
