@@ -110,6 +110,7 @@
 		nitrogen #wallpaper manager for x11
 		dunst #notifications
 		feh # image viewer
+		v4l-utils
 
 		kitty #terminal
 		yazi #file manager
