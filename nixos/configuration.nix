@@ -44,7 +44,6 @@
 	};
 
 	# Enable sound with pipewire.
-	sound.enable = true;
 	hardware.pulseaudio.enable = false;
 	security.rtkit.enable = true;
 	services.pipewire = {
@@ -193,7 +192,7 @@
 	];
 
 	#Nvidia
-	hardware.opengl.enable = true;
+	hardware.graphics.enable = true;
 
 
 	hardware.nvidia = {

@@ -36,7 +36,7 @@
 		enable = true;
 		#theme = "PaperColor Dark";
 		#theme = "Kanagawa";
-		theme = "Tokyo Night Moon";
+		themeFile = "tokyo_night_moon";
 		font.name = "Meslo";
 	};
 
