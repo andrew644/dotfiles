@@ -1,46 +1,48 @@
 { ... }:
 
 {
-	imports = [
-		./zsh.nix
-		./waybar.nix
-		./swaylock.nix
-		./wofi.nix
-	];
+	home-manager.users.andrew = { pkgs, ... }: {
+		imports = [
+			./zsh.nix
+			./waybar.nix
+			./swaylock.nix
+			./wofi.nix
+		];
 
-	home.file.".config/hypr/hyprland.conf".source = ../hyprland/hyprland.conf;
-	home.file.".xinitrc".source = ../x11/.xinitrc;
-	home.file.".config/rofi/config.rasi".source = ../rofi/config.rasi;
-	home.file.".config/i3/config".source = ../i3/config;
-	home.file.".config/i3status/config".source = ../i3status/config;
-	home.file.".config/picom/picom.conf".source = ../picom/picom.conf;
-	home.file.".config/zathura/zathurarc".source = ../zathura/zathurarc;
+		home.file.".config/hypr/hyprland.conf".source = ../hyprland/hyprland.conf;
+		home.file.".xinitrc".source = ../x11/.xinitrc;
+		home.file.".config/rofi/config.rasi".source = ../rofi/config.rasi;
+		home.file.".config/i3/config".source = ../i3/config;
+		home.file.".config/i3status/config".source = ../i3status/config;
+		home.file.".config/picom/picom.conf".source = ../picom/picom.conf;
+		home.file.".config/zathura/zathurarc".source = ../zathura/zathurarc;
 
-	home.file.".config/nvim" = {
-		source = ../nvim;
-		recursive = true;
+		home.file.".config/nvim" = {
+			source = ../nvim;
+			recursive = true;
+		};
+
+		home.username = "andrew";
+		home.homeDirectory = "/home/andrew";
+
+		programs.git = {
+			enable = true;
+			userName = "andrew644";
+			userEmail = "andrew644@users.noreply.github.com";
+			#TODO Add push mode 
+		};
+
+		programs.kitty =
+		{
+			enable = true;
+			#theme = "PaperColor Dark";
+			#theme = "Kanagawa";
+			themeFile = "Tokyo Night Moon";
+			font.name = "Meslo";
+		};
+
+		home.stateVersion = "24.11";
+
+		programs.home-manager.enable = true;
 	};
-
-	home.username = "andrew";
-	home.homeDirectory = "/home/andrew";
-
-	programs.git = {
-		enable = true;
-		userName = "andrew644";
-		userEmail = "andrew644@users.noreply.github.com";
-		#TODO Add push mode 
-	};
-
-	programs.kitty =
-	{
-		enable = true;
-		#theme = "PaperColor Dark";
-		#theme = "Kanagawa";
-		theme = "Tokyo Night Moon";
-		font.name = "Meslo";
-	};
-
-	home.stateVersion = "24.05";
-
-	programs.home-manager.enable = true;
 }

@@ -1,12 +1,12 @@
 
 # first time setup
 # install home-manager
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
-nix-channel --update
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
+sudo nix-channel --update
 
 rm .nix files in /etc/nixos
-ln -s ~/dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
-ln -s ~/dotfiles/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
+sudo ln -s ~/dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
+sudo ln -s ~/dotfiles/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 
 # update system with new config changes
 sudo nixos-rebuild switch
