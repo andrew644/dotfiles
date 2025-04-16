@@ -35,9 +35,7 @@
 		programs.kitty =
 		{
 			enable = true;
-			#theme = "PaperColor Dark";
-			#theme = "Kanagawa";
-			themeFile = "Tokyo Night Moon";
+			themeFile = "tokyo_night_moon";
 			font.name = "Meslo";
 		};
 

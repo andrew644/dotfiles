@@ -47,13 +47,11 @@
 		LC_TIME = "en_US.UTF-8";
 	};
 	
-	# Enable the X11 windowing system.
-	# You can disable this if you're only using the Wayland session.
-	services.xserver.enable = true;
-	
-	# Enable the KDE Plasma Desktop Environment.
-	services.displayManager.sddm.enable = true;
-	services.desktopManager.plasma6.enable = true;
+	services.xserver = {
+		enable = true;
+		displayManager.gdm.enable = true;
+		desktopManager.gnome.enable = true;
+	};
 	
 	# Configure keymap in X11
 	services.xserver.xkb = {
@@ -122,6 +120,10 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
+		#Gnome
+		gnomeExtensions.appindicator
+		gnome-tweaks
+
 		#WM tools
 		rofi #app launcher
 		arandr #gui xrandr
@@ -154,6 +156,7 @@
 		unzip
 
 		#Dev
+		jetbrains.idea-community
 		gcc
 		gnumake
 		cmake
@@ -177,6 +180,8 @@
 		#webdev
 		nodejs_22
 	];
+
+	services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 	
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
