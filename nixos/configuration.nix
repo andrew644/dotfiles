@@ -98,6 +98,10 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
+		#Gnome
+		gnomeExtensions.appindicator
+		gnome-tweaks
+
 		#WM tools
 		rofi #app launcher
 		arandr #gui xrandr
@@ -164,15 +168,12 @@
 
 			videoDrivers = [ "nvidia" ];
 
-			displayManager.startx.enable = true;
-
-			windowManager.awesome = {
-				enable = false;
-				luaModules = with pkgs.luaPackages; [
-					luarocks # package manager for lua
-					luadbi-mysql
-				];
+			displayManager = {
+				startx.enable = true;
+				gdm.enable = true;
 			};
+
+			desktopManager.gnome.enable = true;
 
 			windowManager.i3 = {
 				enable = true;
