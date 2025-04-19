@@ -25,6 +25,7 @@
 			restart = "sudo shutdown -r now";
 
 			switch = "sudo nixos-rebuild switch";
+			upgrade = "sudo nixos-rebuild switch --upgrade";
 
 			mountwin = "sudo ntfs-3g /dev/nvme0n1p3 ~/mount/windows";
 		};
