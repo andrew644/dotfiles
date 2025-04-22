@@ -154,6 +154,7 @@
 		#Rust
 		rustc
 		rust-analyzer
+		rustfmt
 		cargo
 
 		#webdev
