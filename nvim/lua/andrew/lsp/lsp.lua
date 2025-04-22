@@ -14,6 +14,16 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("n", "<leader>ff", function() vim.lsp.buf.format() end, opts)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+	-- Autoformat code on save
+	if client.server_capabilities.documentFormattingProvider then
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format({ async = true })
+			end
+		})
+	end
 end)
 
 require('mason').setup({})
@@ -56,16 +66,7 @@ cmp.setup({
 	}),
 })
 
-require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').rust_analyzer.setup({
+})
 require('lspconfig').clangd.setup({
-	on_attach = function(client, bufnr)
-		if client.server_capabilities.documentFormattingProvider then
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.format({ async = true })
-				end
-			})
-		end
-	end
 })
