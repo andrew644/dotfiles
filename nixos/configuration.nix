@@ -99,8 +99,8 @@
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
 		#Gnome
-		gnomeExtensions.appindicator
-		gnome-tweaks
+		#gnomeExtensions.appindicator
+		#gnome-tweaks
 
 		#WM tools
 		rofi #app launcher
@@ -134,6 +134,8 @@
 		unzip
 
 		#Dev
+		jetbrains.idea-community
+		jetbrains.jdk
 		gcc
 		gnumake
 		cmake
@@ -170,10 +172,10 @@
 
 			displayManager = {
 				startx.enable = true;
-				gdm.enable = true;
+				gdm.enable = false;
 			};
 
-			desktopManager.gnome.enable = true;
+			desktopManager.gnome.enable = false;
 
 			windowManager.i3 = {
 				enable = true;
