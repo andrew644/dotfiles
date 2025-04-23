@@ -159,6 +159,10 @@
 
 		#webdev
 		nodejs_22
+
+		#gamedev
+		blender
+		libresprite
 	];
 
 
