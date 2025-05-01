@@ -123,6 +123,7 @@
 		#Gnome
 		gnomeExtensions.appindicator
 		gnome-tweaks
+		tokyonight-gtk-theme
 
 		#WM tools
 		rofi #app launcher
@@ -156,7 +157,8 @@
 		unzip
 
 		#Dev
-		jetbrains.idea-community
+		#jetbrains.idea-community
+		#jetbrains.jdk
 		gcc
 		gnumake
 		cmake
@@ -176,6 +178,9 @@
 		rustc
 		rust-analyzer
 		cargo
+
+		#Go
+		go
 
 		#webdev
 		nodejs_22
