@@ -152,10 +152,14 @@
 		texlive.combined.scheme-full #latex
 
 		#Rust
-		rustc
-		rust-analyzer
-		rustfmt
-		cargo
+		rustup
+		#rustc
+		#rust-analyzer
+		#rustfmt
+		#cargo
+
+		#zig
+		#zig
 
 		#webdev
 		nodejs_22
@@ -165,6 +169,7 @@
 		libresprite
 	];
 
+	services.tumbler.enable = true; # Thumbnail support for images in thunar
 
 	services = {
 		displayManager.sddm.enable = false;

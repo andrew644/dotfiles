@@ -45,6 +45,10 @@ require('mason-lspconfig').setup({
 				cmd = { 'clangd' },
 			})
 		end,
+		zls = function()
+			require('lspconfig').zls.setup({
+			})
+		end,
 	}
 })
 
@@ -69,4 +73,6 @@ cmp.setup({
 require('lspconfig').rust_analyzer.setup({
 })
 require('lspconfig').clangd.setup({
+})
+require('lspconfig').zls.setup({
 })
