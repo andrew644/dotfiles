@@ -69,7 +69,9 @@
 			neofetch
 			fastfetch
 			spotify
-			sptlrx #spotify lyrics in terminal
+			strawberry #music
+			quodlibet #music
+			cmus #music
 			veracrypt
 			mpv #video player
 			yt-dlp

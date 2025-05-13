@@ -5,10 +5,10 @@ Add config for my own setting for vim-which-key
 check legacy config for missing stuff
 gramarly - setup node
 show trailing whitespace automatically when no currently typing
-show markdown file
+preview markdown file
 
 #nixos
-spotify terminal with lyrics
+currently playing song lyrics
 
 #awesome
 theme

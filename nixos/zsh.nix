@@ -15,6 +15,7 @@
 			e = "yazi";
 			i = "nomacs";
 			pdf = "zathura";
+			music = "cmus";
 
 			vim = "nvim";
 			vi = "nvim";
