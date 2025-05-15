@@ -1,18 +1,18 @@
 
 # first time setup
 # install home-manager
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
-nix-channel --update
+nix-shell -p git neovim
+git clone ...
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+sudo nix-channel --update
 
-rm .nix files in /etc/nixos
-ln -s ~/dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
-ln -s ~/dotfiles/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
+sudo rm /etc/nixos/configuration.nix
+sudo rm /etc/nixos/hardware-configuration.nix
+sudo ln -s ~/dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
+sudo ln -s ~/dotfiles/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 
 # update system with new config changes
 sudo nixos-rebuild switch
-
-# temporary install of a program
-nix-shell -p sqlite
 
 # start hyprland
 Hyprland
