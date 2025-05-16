@@ -134,6 +134,8 @@
 		btop
 		killall
 		unzip
+		nmap #ip scan
+		rsync #data transfer
 
 		#Dev
 		jetbrains.idea-community
