@@ -1,0 +1,20 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    user: 1000:100 # should be owner of volumes
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+    volumes:
+      - "/home/andrew/navidrome/data:/data"
+      - "/home/andrew/music/:/music:ro"
+  adguardhome:
+    image: adguard/adguardhome
+    ports:
+      - 53:53/tcp # plain dns over tcp
+      - 53:53/udp # plain dns over udp
+      - 80:80/tcp # http web interface
+      - 3000:3000/tcp # initial setup web interface
+    volumes:
+      - "/home/andrew/adguard/config/:/opt/adguardhome/conf" # app configuration
+      - "/home/andrew/adguard/work/:/opt/adguardhome/work" # app working directory

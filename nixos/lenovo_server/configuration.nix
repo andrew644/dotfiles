@@ -60,7 +60,11 @@
 	users.users.andrew = {
 		isNormalUser = true;
 		description = "Andrew";
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [
+			"networkmanager"
+			"wheel"
+			"docker"
+		];
 		packages = with pkgs; [
 			firefox
 			neofetch
@@ -142,15 +146,31 @@
 		#gamedev
 		#blender
 		#libresprite
+
+		#server
+		docker-compose
 	];
+
+	virtualisation.docker = {
+		enable = true;
+		daemon.settings = {
+			userland-proxy = false;
+		};
+	};
 
 	services.tumbler.enable = true; # Thumbnail support for images in thunar
 
 	services = {
 		displayManager.sddm.enable = false;
+		desktopManager.plasma6.enable = false;
 		libinput.mouse.accelProfile = "flat";
 		xserver = {
 			enable = true;
+
+			displayManager = {
+				startx.enable = true;
+				gdm.enable = false;
+			};
 
 			windowManager.i3 = {
 				enable = true;
