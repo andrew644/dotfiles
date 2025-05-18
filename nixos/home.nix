@@ -28,7 +28,13 @@
 		enable = true;
 		userName = "andrew644";
 		userEmail = "andrew644@users.noreply.github.com";
-		#TODO Add push mode 
+		extraConfig = {
+			push = {
+				default = "simple";
+				autoSetupRemote = true;
+			};
+			init.defaultBranch = "main";
+		};
 	};
 
 	programs.kitty =
