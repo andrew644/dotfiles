@@ -116,6 +116,7 @@
 		dunst #notifications
 		feh # image viewer
 		v4l-utils
+		pasystray #PulsAaudio system tray
 
 		kitty #terminal
 		yazi #file manager
