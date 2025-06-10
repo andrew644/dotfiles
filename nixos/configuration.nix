@@ -85,6 +85,8 @@
 			gimp #art
 			inkscape-with-extensions #svg art
 			obs-studio
+			pcsx2 #PS2
+			qbittorrent #bittorrent
 		];
 	};
 
