@@ -14,6 +14,13 @@ sudo ln -s ~/dotfiles/nixos/hardware-configuration.nix /etc/nixos/hardware-confi
 # update system with new config changes
 sudo nixos-rebuild switch
 
+
+# update git remote to ssh
+git remote set-url origin git@github.com:andrew644/dotfiles.git
+
+# make ssh key
+ssh-keygen -t ed25519 -C "github@aishearer.com"
+
 # start hyprland
 Hyprland
 
