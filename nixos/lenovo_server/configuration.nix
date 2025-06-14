@@ -6,15 +6,13 @@
 			./hardware-configuration.nix
 			<home-manager/nixos>
 		];
-	
+
 	# Bootloader.
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-	
+	boot.loader.grub.enable = true;
+	boot.loader.grub.device = "/dev/sda";
+	boot.loader.grub.useOSProber = true;
+
 	networking.hostName = "Lenovo_Server_1";
-	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-	
-	networking.networkmanager.enable = true;
 
 	#clear old generations
 	nix.gc = {
@@ -22,9 +20,16 @@
 		dates = "weekly";
 		options = "--delete-older-than 30d";
 	};
-	
+
+	# Enable networking
+	networking.networkmanager.enable = true;
+
+	# Set your time zone.
 	time.timeZone = "America/New_York";
+
+	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
+
 	i18n.extraLocaleSettings = {
 		LC_ADDRESS = "en_US.UTF-8";
 		LC_IDENTIFICATION = "en_US.UTF-8";
@@ -37,26 +42,22 @@
 		LC_TIME = "en_US.UTF-8";
 	};
 
+	# Configure keymap in X11
+	services.xserver.xkb = {
+		layout = "us";
+		variant = "";
+	};
+
+	# Enable sound with pipewire.
+	services.pulseaudio.enable = false;
 	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-		# If you want to use JACK applications, uncomment this
-		#jack.enable = true;
+	};
 
-		# use the example session manager (no others are packaged yet so this is enabled by default,
-		# no need to redefine it in your config for now)
-		#media-session.enable = true;
-	};
-	
-	# Configure keymap in X11
-	services.xserver.xkb = {
-		layout = "us";
-		variant = "";
-	};
-	
 	users.users.andrew = {
 		isNormalUser = true;
 		description = "Andrew";
@@ -82,9 +83,7 @@
 	home-manager.users.andrew = {
 		imports = [ ../home.nix ];
 	};
-	
-	nixpkgs.config.allowUnfree = true;
-	
+
 	environment.systemPackages = with pkgs; [
 		#WM tools
 		rofi #app launcher
@@ -128,7 +127,7 @@
 		lldb_18
 		bear # generate compile_commands.json for c++ autocomplete
 		python3
-		texlive.combined.scheme-full #latex
+		#texlive.combined.scheme-full #latex
 
 		#Rust
 		rustup
@@ -150,28 +149,28 @@
 		#server
 		docker-compose
 	];
-
+	
 	virtualisation.docker = {
 		enable = true;
 		daemon.settings = {
 			userland-proxy = false;
 		};
 	};
-
+	
 	services.tumbler.enable = true; # Thumbnail support for images in thunar
-
+	
 	services = {
 		displayManager.sddm.enable = false;
 		desktopManager.plasma6.enable = false;
 		libinput.mouse.accelProfile = "flat";
 		xserver = {
 			enable = true;
-
+			
 			displayManager = {
 				startx.enable = true;
 				gdm.enable = false;
 			};
-
+			
 			windowManager.i3 = {
 				enable = true;
 				package = pkgs.i3-gaps;
@@ -181,16 +180,20 @@
 			};
 		};
 	};
-
+	
 	services.openssh.enable = true;
-
+	
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
-
-	fonts.packages = with pkgs; [
-		(nerdfonts.override { fonts = [ "Hack" "Meslo" ]; })
-	];
 	
-	system.stateVersion = "24.11"; # Did you read the comment?
+	fonts.packages = with pkgs; [
+		nerd-fonts.hack
+		nerd-fonts.meslo-lg
+	];
+
+	# Allow unfree packages
+	nixpkgs.config.allowUnfree = true;
+
+	system.stateVersion = "25.05"; # Did you read the comment?
 
 }

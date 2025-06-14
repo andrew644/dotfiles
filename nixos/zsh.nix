@@ -30,7 +30,7 @@
 
 			mountwin = "sudo ntfs-3g /dev/nvme0n1p3 ~/mount/windows";
 		};
-		initExtra = ''
+		initContent = ''
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
