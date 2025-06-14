@@ -181,8 +181,12 @@
 		};
 	};
 	
-	services.openssh.enable = true;
-	
+	services.openssh = {
+		enable = true;
+		PermitRootLogin = "no";
+		PasswordAuthentication = false;
+	};
+
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
 	
