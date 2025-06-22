@@ -44,7 +44,7 @@
 	};
 
 	# Enable sound with pipewire.
-	hardware.pulseaudio.enable = false;
+	services.pulseaudio.enable = false;
 	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;
@@ -209,7 +209,8 @@
 	users.defaultUserShell = pkgs.zsh;
 
 	fonts.packages = with pkgs; [
-		(nerdfonts.override { fonts = [ "Hack" "Meslo" ]; })
+		nerd-fonts.hack
+		nerd-fonts.meslo-lg
 	];
 
 	#Nvidia
