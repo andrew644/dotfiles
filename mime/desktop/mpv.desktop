@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=MPV Media Player
+GenericName=Media Player
+Comment=Play videos and music
+Exec=mpv %U
+Icon=mpv
+Terminal=false
+Type=Application
+MimeType=video/mp4;video/x-matroska;video/webm;audio/mpeg;audio/x-flac;audio/mp4;application/ogg;audio/x-vorbis+ogg;video/ogg;
+Categories=AudioVideo;Player;Video

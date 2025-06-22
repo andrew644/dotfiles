@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zathura
+GenericName=Document Viewer
+Comment=Lightweight document viewer
+Exec=zathura %U
+Icon=zathura
+Terminal=false
+Type=Application
+MimeType=application/pdf;application/x-pdf;application/postscript;application/epub+zip;application/djvu;
+Categories=Office;Viewer;

@@ -15,6 +15,13 @@
 	home.file.".config/i3status/config".source = ../i3status/config;
 	home.file.".config/picom/picom.conf".source = ../picom/picom.conf;
 	home.file.".config/zathura/zathurarc".source = ../zathura/zathurarc;
+	home.file.".config/mpv/mpv.conf".source = ../mpv/mpv.conf;
+
+	#mime - file associations
+	home.file.".config/mimeapps.list".source = ../mime/mimeapps.list;
+
+	home.file.".local/share/applications/zathura.desktop".source = ../mime/desktop/zathura.desktop;
+	home.file.".local/share/applications/mpv.desktop".source = ../mime/desktop/mpv.desktop;
 
 	home.file.".config/nvim" = {
 		source = ../nvim;
