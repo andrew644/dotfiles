@@ -123,6 +123,7 @@
 		kitty #terminal
 		yazi #file manager
 		nomacs #image viewer
+		scrot #screenshots
 
 		vesktop #discord app
 
@@ -153,7 +154,7 @@
 		scons
 		gdb
 		lldb_18
-		godot_4
+		godot
 		bear # generate compile_commands.json for c++ autocomplete
 		python3
 		texlive.combined.scheme-full #latex

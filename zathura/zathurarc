@@ -49,3 +49,5 @@ set recolor-keephue             true
 
 # Don't allow original PDF colors to be used
 set recolor-reverse-video       false
+
+set selection-clipboard clipboard
