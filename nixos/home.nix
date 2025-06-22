@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
 	imports = [
@@ -52,6 +52,28 @@
 		#theme = "Kanagawa";
 		themeFile = "tokyo_night_moon";
 		font.name = "Meslo";
+	};
+
+	#theme
+	gtk = {
+		enable = true;
+
+		theme = {
+			name = "Tokyonight-Dark";
+			package = pkgs.tokyonight-gtk-theme;
+		};
+
+		iconTheme = {
+			name = "Papirus";
+			package = pkgs.papirus-icon-theme;
+		};
+	};
+
+	xdg.enable = true;
+
+	home.sessionVariables = {
+		GTK_THEME = "Tokyonight-Dark";
+		ICON_THEME = "Papirus";
 	};
 
 	home.sessionPath = ["$HOME/bin"];

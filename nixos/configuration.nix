@@ -92,8 +92,11 @@
 
 	programs.steam.enable = true;
 
-	home-manager.users.andrew = {
-		imports = [ ./home.nix ];
+	home-manager = {
+		users.andrew = {
+			imports = [ ./home.nix ];
+		};
+		backupFileExtension = "backup";
 	};
 
 	# Allow unfree packages
@@ -119,6 +122,8 @@
 		feh # image viewer
 		v4l-utils
 		pasystray #PulsAaudio system tray
+		papirus-icon-theme
+		tokyonight-gtk-theme
 
 		kitty #terminal
 		yazi #file manager
@@ -208,6 +213,8 @@
 
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
+
+	programs.dconf.enable = true;
 
 	fonts.packages = with pkgs; [
 		nerd-fonts.hack
