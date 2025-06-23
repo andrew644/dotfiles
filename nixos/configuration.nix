@@ -113,7 +113,6 @@
 		rofi #app launcher
 		arandr #gui xrandr
 		xclip #clipboard support for vim
-		i3lock #screen lock
 		libnotify #send notifications with notify-send
 		playerctl #control media and get metadata
 		picom
@@ -210,6 +209,9 @@
 			};
 		};
 	};
+
+	programs.i3lock.enable = true;
+	security.pam.services.i3lock.enable = true;
 
 	programs.zsh.enable = true;
 	users.defaultUserShell = pkgs.zsh;
