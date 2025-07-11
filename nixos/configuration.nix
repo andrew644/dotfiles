@@ -119,7 +119,7 @@
 		nitrogen #wallpaper manager for x11
 		dunst #notifications
 		feh # image viewer
-		v4l-utils
+		v4l-utils #webcam config tool
 		pasystray #PulsAaudio system tray
 		papirus-icon-theme
 		tokyonight-gtk-theme
