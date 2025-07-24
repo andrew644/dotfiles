@@ -52,6 +52,7 @@
 		#theme = "Kanagawa";
 		themeFile = "tokyo_night_moon";
 		font.name = "Meslo";
+		extraConfig = "cursor_trail 3\n";
 	};
 
 	#theme
