@@ -142,6 +142,7 @@
 		btop
 		killall
 		unzip
+		zip
 		nmap #ip scan
 		rsync #data transfer
 		desktop-file-utils #register .desktop files
