@@ -70,10 +70,12 @@
 			fastfetch
 			spotify
 			strawberry #music
+			audacity
 			quodlibet #music
 			cmus #music
 			veracrypt
 			mpv #video player
+			vlc
 			yt-dlp
 			ffmpeg
 			protonplus
@@ -164,6 +166,7 @@
 		bear # generate compile_commands.json for c++ autocomplete
 		python3
 		texlive.combined.scheme-full #latex
+		libgcc
 
 		#Rust
 		rustup

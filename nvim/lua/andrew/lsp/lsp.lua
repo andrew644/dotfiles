@@ -20,7 +20,7 @@ lsp_zero.on_attach(function(client, bufnr)
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			buffer = bufnr,
 			callback = function()
-				vim.lsp.buf.format({ async = true })
+				vim.lsp.buf.format({ async = false })
 			end
 		})
 	end
@@ -49,6 +49,10 @@ require('mason-lspconfig').setup({
 			require('lspconfig').zls.setup({
 			})
 		end,
+		ols = function()
+			require('lspconfig').ols.setup({
+			})
+		end,
 	}
 })
 
@@ -75,4 +79,6 @@ require('lspconfig').rust_analyzer.setup({
 require('lspconfig').clangd.setup({
 })
 require('lspconfig').zls.setup({
+})
+require('lspconfig').ols.setup({
 })
