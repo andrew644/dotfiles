@@ -23,11 +23,6 @@
 	home.file.".local/share/applications/zathura.desktop".source = ../mime/desktop/zathura.desktop;
 	home.file.".local/share/applications/mpv.desktop".source = ../mime/desktop/mpv.desktop;
 
-	home.file.".config/nvim" = {
-		source = ../nvim;
-		recursive = true;
-	};
-
 	home.username = "andrew";
 	home.homeDirectory = "/home/andrew";
 

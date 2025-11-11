@@ -66,31 +66,10 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use "NLKNguyen/papercolor-theme" -- Papercolor theme
 	use "rebelot/kanagawa.nvim" -- kanagawa theme
-	use "folke/tokyonight.nvim" -- kanagawa theme
+	use "folke/tokyonight.nvim" -- tokyonight theme
 
 	-- LSP
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-			-- Mason
-			{ 'williamboman/mason.nvim' },
-			{ 'williamboman/mason-lspconfig.nvim' },
-
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },
-			{ 'hrsh7th/cmp-nvim-lsp' },
-			{ 'hrsh7th/cmp-buffer' },
-			{ 'hrsh7th/cmp-path' },
-			{ 'hrsh7th/cmp-cmdline' },
-			-- Snippets
-			{ 'L3MON4D3/LuaSnip' },
-			{ 'saadparwaiz1/cmp_luasnip' },
-			{ 'rafamadriz/friendly-snippets' },
-		}
-	}
+	use "neovim/nvim-lspconfig" -- config for LSPs
 
 	-- Debug
 	use {
@@ -135,6 +114,7 @@ return packer.startup(function(use)
 	-- Which key
 	use "folke/which-key.nvim"
 
+	-- Greeter on start
 	use {
 		'goolord/alpha-nvim',
 		requires = { { 'echasnovski/mini.icons' } },

@@ -70,7 +70,7 @@
 			fastfetch
 			spotify
 			strawberry #music
-			audacity
+			audacity #sound editor
 			quodlibet #music
 			cmus #music
 			veracrypt
@@ -162,7 +162,7 @@
 		scons
 		gdb
 		lldb_18
-		godot
+		godotPackages_4_5.godot-mono
 		bear # generate compile_commands.json for c++ autocomplete
 		python3
 		texlive.combined.scheme-full #latex
@@ -184,8 +184,12 @@
 		#gamedev
 		blender
 		libresprite
+		roslyn-ls # C# language server
+		dotnet-runtime_10
+		dotnet-sdk_10
+		jetbrains.rider
 	];
-
+	
 	services.tumbler.enable = true; # Thumbnail support for images in thunar
 
 	services = {
