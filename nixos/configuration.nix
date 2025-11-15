@@ -180,6 +180,7 @@
 
 		#webdev
 		nodejs_22
+		vtsls
 
 		#gamedev
 		blender
@@ -187,6 +188,7 @@
 		roslyn-ls # C# language server
 		dotnet-runtime_10
 		dotnet-sdk_10
+		mono
 		jetbrains.rider
 	];
 	

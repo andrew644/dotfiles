@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use {
 		'ggandor/leap.nvim',
 		config = function()
-			require('leap').set_default_mappings()
+			require('leap')
 		end
 	}
 
@@ -69,7 +69,13 @@ return packer.startup(function(use)
 	use "folke/tokyonight.nvim" -- tokyonight theme
 
 	-- LSP
-	use "neovim/nvim-lspconfig" -- config for LSPs
+	use "neovim/nvim-lspconfig"
+	-- Autocomplete
+	use "hrsh7th/nvim-cmp"
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-path"
+	use "hrsh7th/cmp-cmdline"
 
 	-- Debug
 	use {
