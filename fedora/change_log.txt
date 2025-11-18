@@ -1,0 +1,3 @@
+Disable mouse acceleration
+Update monitor order and primary monitor
+Installed rider to ~/.local/bin
