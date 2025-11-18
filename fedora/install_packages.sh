@@ -3,6 +3,7 @@
 sudo dnf do \
 	--action=install neovim \
 	--action=install kitty \
+	--action=install cascadia-mono-nf-fonts \
 	--action=install htop \
 	--action=install zsh \
 	--action=install fastfetch \
