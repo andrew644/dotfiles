@@ -1,3 +1,6 @@
 Disable mouse acceleration
 Update monitor order and primary monitor
 Installed rider to ~/.local/bin
+Installed Bruno from rpm
+Added krohnkite to kde and set keybinds
+Added discord through rpmfusion repos
