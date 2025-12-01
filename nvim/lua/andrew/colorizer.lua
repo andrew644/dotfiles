@@ -7,4 +7,5 @@ require 'colorizer'.setup {
 	'i3config';
 	'rasi';
 	'dots';
+	'kdl';
 }

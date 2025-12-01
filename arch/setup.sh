@@ -18,6 +18,9 @@ ln -sf ~/dotfiles/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
 mkdir -p ~/.config/niri
 ln -sf ~/dotfiles/niri/config.kdl ~/.config/niri/config.kdl
 
+mkdir -p ~/.config/noctalia
+ln -sf ~/dotfiles/noctalia/colors.json ~/.config/noctalia/colors.json
+ln -sf ~/dotfiles/noctalia/settings.json ~/.config/noctalia/settings.json
 
 #git
 git config --global user.name "andrew644"
