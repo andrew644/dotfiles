@@ -1,0 +1,14 @@
+install:
+git
+firefox
+neovim
+zsh
+less
+ttf-meslo-nerd
+nodejs
+npm
+
+
+get .ssh keys
+
+login to firefox
