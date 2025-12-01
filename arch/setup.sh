@@ -15,6 +15,9 @@ mkdir -p ~/.config/kitty
 ln -sf ~/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf ~/dotfiles/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
 
+mkdir -p ~/.config/niri
+ln -sf ~/dotfiles/niri/config.kdl ~/.config/niri/config.kdl
+
 
 #git
 git config --global user.name "andrew644"
