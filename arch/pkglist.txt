@@ -1,9 +1,11 @@
 alacritty
 amd-ucode
+aspnet-runtime
 base
 base-devel
 bluez
 bluez-utils
+bruno-bin
 btrfs-progs
 dotnet-runtime
 dotnet-sdk
@@ -43,6 +45,12 @@ sof-firmware
 swaybg
 swayidle
 swaylock
+texlive-basic
+texlive-binextra
+texlive-fontsrecommended
+texlive-latex
+texlive-latexextra
+texlive-latexrecommended
 ttf-meslo-nerd
 vim
 vulkan-radeon
@@ -57,9 +65,12 @@ xdg-utils
 xf86-video-amdgpu
 xf86-video-ati
 xorg-server
+xorg-xeyes
 xorg-xinit
 xorg-xwayland
 xwayland-satellite
 zathura
+zathura-cb
+zathura-pdf-mupdf
 zram-generator
 zsh

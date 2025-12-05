@@ -225,7 +225,7 @@
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
-        "animationSpeed": 1.4900000000000002,
+        "animationSpeed": 1.5000000000000002,
         "avatarImage": "/home/andrew/.face",
         "compactLockScreen": false,
         "dimmerOpacity": 0.6,
@@ -400,7 +400,7 @@
         ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
-        "randomEnabled": true,
+        "randomEnabled": false,
         "randomIntervalSec": 3600,
         "recursiveSearch": false,
         "setWallpaperOnAllMonitors": true,
