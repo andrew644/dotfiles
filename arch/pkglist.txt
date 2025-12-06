@@ -19,6 +19,7 @@ htop
 iwd
 kitty
 less
+libnotify
 libpulse
 lightdm
 lightdm-gtk-greeter

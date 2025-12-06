@@ -33,6 +33,12 @@ alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -la --color=auto'
 
+alias pdf=zathura
+
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo shutdown -r now'
+alias restart='sudo shutdown -r now'
+
 # Set prompt
 [ -f ~/dotfiles/zsh/.zshprompt.sh ] && source ~/dotfiles/zsh/.zshprompt.sh
 

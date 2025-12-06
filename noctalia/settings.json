@@ -250,12 +250,12 @@
     "location": {
         "analogClockInCalendar": false,
         "firstDayOfWeek": -1,
-        "name": "Tokyo",
+        "name": "Wilmington, DE",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
         "use12hourFormat": false,
-        "useFahrenheit": false,
+        "useFahrenheit": true,
         "weatherEnabled": true,
         "weatherShowEffects": true
     },
