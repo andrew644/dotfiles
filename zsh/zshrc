@@ -2,9 +2,17 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
+setopt SHARE_HISTORY       # Share history instantly
+setopt HIST_IGNORE_DUPS    # Don't record a command if it's the same as the last
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS  # Trim extra whitespace
+# Append to the history file, don't overwrite it
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY  # Write each command as soon as you run it
+# Saner history behavior
+setopt EXTENDED_HISTORY    # Save timestamp + duration
+setopt HIST_VERIFY         # Don't execute event expansion immediately
 
 # type name of directory to cd into it
 setopt autocd
@@ -20,7 +28,6 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
 # Autocomplere commands
-zstyle :compinstall filename '/home/andrew/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -41,5 +48,7 @@ alias restart='sudo shutdown -r now'
 
 # Set prompt
 [ -f ~/dotfiles/zsh/zshprompt.sh ] && source ~/dotfiles/zsh/zshprompt.sh
+[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:~/bin/zig

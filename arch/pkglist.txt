@@ -76,3 +76,5 @@ zathura-cb
 zathura-pdf-mupdf
 zram-generator
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
