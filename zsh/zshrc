@@ -40,6 +40,6 @@ alias reboot='sudo shutdown -r now'
 alias restart='sudo shutdown -r now'
 
 # Set prompt
-[ -f ~/dotfiles/zsh/.zshprompt.sh ] && source ~/dotfiles/zsh/.zshprompt.sh
+[ -f ~/dotfiles/zsh/zshprompt.sh ] && source ~/dotfiles/zsh/zshprompt.sh
 
 export PATH=$PATH:~/bin/zig

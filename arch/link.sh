@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #link config
-ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
 mkdir -p ~/.config/kitty
 ln -sf ~/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf

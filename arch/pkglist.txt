@@ -12,6 +12,7 @@ dotnet-sdk
 efibootmgr
 fastfetch
 firefox
+fish
 fuzzel
 git
 gst-plugin-pipewire
