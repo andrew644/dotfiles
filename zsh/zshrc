@@ -40,6 +40,12 @@ alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -la --color=auto'
 
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add -A'
+alias gc='git commit -m '
+alias gp='git push'
+
 alias pdf=zathura
 
 alias shutdown='sudo shutdown -h now'
