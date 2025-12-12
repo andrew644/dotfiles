@@ -7,6 +7,7 @@ bluez
 bluez-utils
 bruno-bin
 btrfs-progs
+discord
 dotnet-runtime
 dotnet-sdk
 efibootmgr
@@ -17,6 +18,8 @@ fuzzel
 git
 gst-plugin-pipewire
 htop
+imv
+intellij-idea-community-edition
 iwd
 kitty
 less
@@ -28,6 +31,7 @@ linux
 linux-firmware
 mako
 man-db
+maven
 nano
 neovim
 niri
@@ -53,7 +57,9 @@ texlive-fontsrecommended
 texlive-latex
 texlive-latexextra
 texlive-latexrecommended
+thunderbird
 ttf-meslo-nerd
+unzip
 vim
 vulkan-radeon
 waybar

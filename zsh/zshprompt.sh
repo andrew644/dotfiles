@@ -34,6 +34,6 @@ git_custom_status() {
 RPS1='$(git_custom_status) $EPS1'
 
 # basic prompt on the left
-PROMPT='%K{magenta}$(printf " %.0s" $(seq 1 $(tput cols)))%k
+PROMPT='%K{blue}$(printf " %.0s" $(seq 1 $(tput cols)))%k
 %F{red}%(?,,X%? )%f%T  %F{blue}%~%f  
 λ '
