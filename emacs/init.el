@@ -1,8 +1,3 @@
-;; Remove ui
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
-
 ;; Package setup
 (require 'package)
 (setq package-archives
@@ -40,8 +35,18 @@
   :config
   (load-theme 'tokyonight-moon :no-confirm))
 
+;;;;;;;;;;;;;;;;
 ;; Settings
+;;;;;;;;;;;;;;;;
 (setq-default tab-width 4)
+
+;; Remove ui
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+
+;; Use system clipboard
+(setq select-enable-clipboard t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
