@@ -11,6 +11,7 @@ discord
 dotnet-runtime
 dotnet-sdk
 efibootmgr
+emacs
 fastfetch
 firefox
 fish
