@@ -13,6 +13,7 @@ dotnet-sdk
 efibootmgr
 emacs
 fastfetch
+fd
 firefox
 fish
 fuzzel
@@ -47,6 +48,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 rider
+ripgrep
 smartmontools
 sof-firmware
 swaybg
