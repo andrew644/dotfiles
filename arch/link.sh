@@ -17,5 +17,9 @@ ln -sf ~/dotfiles/noctalia/settings.json ~/.config/noctalia/settings.json
 sudo mkdir -p /etc/pacman.d/hooks
 sudo ln -sf ~/dotfiles/arch/andrew_pacman_install.hook /etc/pacman.d/hooks/andrew_pacman_install.hook
 
+sudo mkdir -p ~/.config/nvim/lua
+ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sf ~/dotfiles/nvim/lua/plugins.lua ~/.config/nvim/lua/plugins.lua
+
 #mkdir -p ~/.emacs.d
 #ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el
