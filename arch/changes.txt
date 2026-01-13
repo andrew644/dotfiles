@@ -20,3 +20,5 @@ paru -S noctalia-shell
 get .ssh keys
 
 login to firefox
+
+doom emacs install

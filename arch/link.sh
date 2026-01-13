@@ -17,5 +17,5 @@ ln -sf ~/dotfiles/noctalia/settings.json ~/.config/noctalia/settings.json
 sudo mkdir -p /etc/pacman.d/hooks
 sudo ln -sf ~/dotfiles/arch/andrew_pacman_install.hook /etc/pacman.d/hooks/andrew_pacman_install.hook
 
-mkdir -p ~/.emacs.d
-ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el
+#mkdir -p ~/.emacs.d
+#ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el
