@@ -78,7 +78,7 @@ keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- LSP
-vim.lsp.enable({"rust_analyzer"})
+vim.lsp.enable({"rust_analyzer", "vtsls"})
 vim.lsp.config('rust_analyzer', {
 	settings = {
 		['rust-analyzer'] = {
