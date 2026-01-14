@@ -92,16 +92,16 @@ return packer.startup(function(use)
 	--}
 
 	-- Status line
-	--use {
-	--	'nvim-lualine/lualine.nvim',
-	--	requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	--}
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 
 	-- Terminal
 	--use { "akinsho/toggleterm.nvim", tag = '*' }
 
 	-- Which key
-	--use "folke/which-key.nvim"
+	use "folke/which-key.nvim"
 
 	-- Greeter on start
 	--use {

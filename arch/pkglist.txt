@@ -49,6 +49,7 @@ pipewire-jack
 pipewire-pulse
 rider
 ripgrep
+rust-analyzer
 smartmontools
 sof-firmware
 swaybg

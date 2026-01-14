@@ -1,7 +1,9 @@
-require "plugins"
+require "andrew.plugins"
+require "andrew.lualine"
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
+-- Set space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -14,13 +16,15 @@ if not status_ok then
 	return
 end
 
+-- Set options
 local options = {
 	clipboard = "unnamedplus",
-	completeopt = { "menuone", "noselect" },
+	completeopt = { "menuone", "noselect", "popup" },
 	fileencoding = "utf-8",
 	ignorecase = true,
 	mouse = "a",
 	pumheight = 10,
+	showtabline = 0,
 	smartcase = true,
 	smartindent = true,
 	splitbelow = true,
@@ -40,12 +44,13 @@ local options = {
 	scrolloff = 8,
 	sidescrolloff = 8,
 	termguicolors = true,
+	winborder = "single",
 }
-
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+-- Set whitespace characters that show with F2
 vim.opt.listchars = {
 	tab = '▸-',         -- Character for tab
 	eol = '↲',          -- Character for end of line
@@ -57,6 +62,7 @@ vim.opt.listchars = {
 
 -- Disable Q
 keymap("n", "Q", "<nop>", opts)
+keymap("n", "q", "<nop>", opts)
 
 -- Toggle show spell check
 keymap("n", "<F1>", ":set spell!<CR>", opts)
@@ -67,5 +73,10 @@ keymap("n", "<F2>", ":set list!<CR>", opts)
 -- Toggle light/dark mode
 keymap("n", "<F3>", ":let &background = ( &background == 'dark' ? 'light' : 'dark' )<CR>", opts)
 
+-- Telescope file finder and grep
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
+
+-- LSP
+vim.lsp.enable({"rust_analyzer"})
+keymap("i", "<C-Space>", "<C-x><C-o>", opts) -- keymap for omni complete
