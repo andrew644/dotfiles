@@ -79,4 +79,15 @@ keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- LSP
 vim.lsp.enable({"rust_analyzer"})
+vim.lsp.config('rust_analyzer', {
+	settings = {
+		['rust-analyzer'] = {
+			completion = {
+				callable = {
+					snippets = "add_parentheses",
+				},
+			},
+		},
+	},
+})
 keymap("i", "<C-Space>", "<C-x><C-o>", opts) -- keymap for omni complete
