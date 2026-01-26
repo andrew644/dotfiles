@@ -91,3 +91,16 @@ vim.lsp.config('rust_analyzer', {
 	},
 })
 keymap("i", "<C-Space>", "<C-x><C-o>", opts) -- keymap for omni complete
+
+--format rust on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.rs",
+	callback = function()
+		vim.lsp.buf.format({
+			async = false,
+			filter = function(client)
+				return client.name == "rust_analyzer"
+			end,
+		})
+	end,
+})

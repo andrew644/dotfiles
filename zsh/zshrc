@@ -60,3 +60,4 @@ alias restart='sudo shutdown -r now'
 [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:~/bin/zig
+export PATH=$PATH:~/.cargo/bin
