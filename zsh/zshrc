@@ -37,8 +37,8 @@ alias vi=nvim
 alias v=nvim
 
 alias ls='ls --color=auto'
-alias ll='ls -la --color=auto'
-alias la='ls -la --color=auto'
+alias ll='ls -lah --color=auto'
+alias la='ls -lah --color=auto'
 
 alias gs='git status'
 alias ga='git add'

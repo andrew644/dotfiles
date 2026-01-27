@@ -17,6 +17,7 @@ fd
 firefox
 fish
 fuzzel
+gimp
 git
 gst-plugin-pipewire
 htop
@@ -68,6 +69,8 @@ vim
 vulkan-radeon
 waybar
 wget
+wine
+wine-mono
 wireless_tools
 wireplumber
 wl-clipboard
