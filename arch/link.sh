@@ -24,6 +24,7 @@ mkdir -p ~/.config/nvim/lua/andrew
 ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sf ~/dotfiles/nvim/lua/andrew/plugins.lua ~/.config/nvim/lua/andrew/plugins.lua
 ln -sf ~/dotfiles/nvim/lua/andrew/lualine.lua ~/.config/nvim/lua/andrew/lualine.lua
+ln -sf ~/dotfiles/nvim/lua/andrew/latex.lua ~/.config/nvim/lua/andrew/latex.lua
 
 #mkdir -p ~/.emacs.d
 #ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el

@@ -1,5 +1,6 @@
 require "andrew.plugins"
 require "andrew.lualine"
+require "andrew.latex"
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
@@ -63,6 +64,23 @@ vim.opt.listchars = {
 -- Disable Q
 keymap("n", "Q", "<nop>", opts)
 keymap("n", "q", "<nop>", opts)
+
+-- move up and down through word wrapped lines
+keymap("n", "j", "gj", opts)
+keymap("n", "k", "gk", opts)
+
+-- Keep cursor in place when using J (join line below)
+keymap("n", "J", "mzJ`z", opts)
+
+-- Stay in indent mode when indenting
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- Don't overwrite buffer when put is called
+keymap("v", "p", '"_dP', opts)
+
+-- Replace current word
+keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
 -- Toggle show spell check
 keymap("n", "<F1>", ":set spell!<CR>", opts)

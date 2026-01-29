@@ -110,7 +110,7 @@ return packer.startup(function(use)
 	--}
 
 	-- latex
-	--use "lervag/vimtex"
+	use "lervag/vimtex"
 
 	-- Color code highlighter
 	--use "norcalli/nvim-colorizer.lua"
