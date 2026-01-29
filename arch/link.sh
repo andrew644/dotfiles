@@ -17,6 +17,9 @@ ln -sf ~/dotfiles/noctalia/settings.json ~/.config/noctalia/settings.json
 sudo mkdir -p /etc/pacman.d/hooks
 sudo ln -sf ~/dotfiles/arch/andrew_pacman_install.hook /etc/pacman.d/hooks/andrew_pacman_install.hook
 
+sudo mkdir -p /etc/NetworkManager/conf.d
+sudo ln -sf ~/dotfiles/arch/wifi_backend.conf /etc/NetworkManager/conf.d/wifi_backend.conf
+
 mkdir -p ~/.config/nvim/lua/andrew
 ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sf ~/dotfiles/nvim/lua/andrew/plugins.lua ~/.config/nvim/lua/andrew/plugins.lua

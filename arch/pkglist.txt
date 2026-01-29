@@ -37,6 +37,7 @@ man-db
 maven
 nano
 neovim
+networkmanager
 niri
 noctalia-shell
 nodejs
