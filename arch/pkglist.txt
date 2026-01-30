@@ -7,6 +7,7 @@ bluez
 bluez-utils
 bruno-bin
 btrfs-progs
+clang
 discord
 dotnet-runtime
 dotnet-sdk
@@ -32,6 +33,7 @@ lightdm
 lightdm-gtk-greeter
 linux
 linux-firmware
+llvm
 mako
 man-db
 maven
