@@ -62,3 +62,7 @@ Use iwctl
 # Check which package has a binary
 sudo pacman -Fy # update package database
 pacman -F binary_name
+
+# Check file system usage
+df -h
+du -h
