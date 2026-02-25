@@ -15,6 +15,7 @@ efibootmgr
 emacs
 fastfetch
 fd
+feh
 firefox
 fish
 fuzzel
