@@ -39,7 +39,7 @@ sudo mount /dev/sda1 ~/mount/usb
 sudo mount -t ntfs-3g /dev/sdb1 ~/mount/usb
 
 # Mount samba NAS
-sudo mount -t cifs //hostname/nas /mnt/nas -o username=andrew
+sudo mount -t cifs //hostname/nas /mnt/nas -o username=andrew,uid=1000,gid=1000
 
 
 # file command
