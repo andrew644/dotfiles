@@ -13,5 +13,8 @@ git config --global user.name "andrew644"
 git config --global user.email "andrew644@users.noreply.github.com"
 git config --global push.default simple
 git config --global init.defaultBranch main
+git config --global pull.rebase false
+git config --global core.editor "nvim"
+
 
 . ~/dotfiles/arch/link.sh
