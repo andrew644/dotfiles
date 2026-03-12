@@ -124,7 +124,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- format odin on save
-vim.api.nvim_create_autocmd("BufWritePre", {
+vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.odin",
 	callback = function()
 		local file = vim.api.nvim_buf_get_name(0)
