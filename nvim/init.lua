@@ -96,7 +96,7 @@ keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- LSP
-vim.lsp.enable({"rust_analyzer", "vtsls"})
+vim.lsp.enable({"rust_analyzer", "vtsls", "ols"})
 vim.lsp.config('rust_analyzer', {
 	settings = {
 		['rust-analyzer'] = {
@@ -110,7 +110,7 @@ vim.lsp.config('rust_analyzer', {
 })
 keymap("i", "<C-Space>", "<C-x><C-o>", opts) -- keymap for omni complete
 
---format rust on save
+-- format rust on save
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.rs",
 	callback = function()
@@ -120,5 +120,15 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 				return client.name == "rust_analyzer"
 			end,
 		})
+	end,
+})
+
+-- format odin on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.odin",
+	callback = function()
+		local file = vim.api.nvim_buf_get_name(0)
+		vim.fn.system({ "odinfmt", "-w", file })
+		vim.cmd("edit!") -- reload buffer
 	end,
 })

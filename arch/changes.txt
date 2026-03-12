@@ -1,18 +1,3 @@
-install:
-git
-firefox
-neovim
-zsh
-less
-man
-ttf-meslo-nerd
-kitty
-
-base-devel
-nodejs
-npm
-
-
 install paru based on aur instructions in github
 
 paru -S noctalia-shell
@@ -21,4 +6,5 @@ get .ssh keys
 
 login to firefox
 
-doom emacs install
+make ~/bin
+put odin in ~/bin (make a link to dir with nightly)
