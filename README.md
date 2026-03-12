@@ -38,6 +38,9 @@ sudo mount /dev/sda1 ~/mount/usb
 # NTFS file systems
 sudo mount -t ntfs-3g /dev/sdb1 ~/mount/usb
 
+# Mount samba NAS
+sudo mount -t cifs //hostname/nas /mnt/nas -o username=andrew
+
 
 # file command
 file ./path/to/binary

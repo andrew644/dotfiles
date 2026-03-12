@@ -1,6 +1,12 @@
 alacritty
 amd-ucode
+arm-none-eabi-binutils
+arm-none-eabi-gcc
+arm-none-eabi-newlib
 aspnet-runtime
+avr-binutils
+avr-libc
+avrdude
 base
 base-devel
 bluez
@@ -8,6 +14,8 @@ bluez-utils
 bruno-bin
 btrfs-progs
 clang
+dfu-programmer
+dfu-util
 discord
 dotnet-runtime
 dotnet-sdk
@@ -30,6 +38,7 @@ kitty
 less
 libnotify
 libpulse
+libusb-compat
 lightdm
 lightdm-gtk-greeter
 linux
@@ -52,14 +61,17 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+python-pip
 rider
 ripgrep
 rust-analyzer
+samba
 smartmontools
 sof-firmware
 swaybg
 swayidle
 swaylock
+teensy_loader_cli
 texlive-basic
 texlive-binextra
 texlive-fontsrecommended
@@ -91,6 +103,7 @@ xwayland-satellite
 zathura
 zathura-cb
 zathura-pdf-mupdf
+zip
 zram-generator
 zsh
 zsh-autosuggestions

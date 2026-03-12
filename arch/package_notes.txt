@@ -1,0 +1,12 @@
+Used for qmk keyboard dev:
+
+arm-none-eabi-binutils
+arm-none-eabi-gcc
+arm-none-eabi-newlib
+avr-binutils
+avr-libc
+avrdude
+dfu-programmer
+dfu-util
+libusb-compat
+teensy_loader_cli
