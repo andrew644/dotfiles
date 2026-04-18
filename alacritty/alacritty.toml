@@ -1,0 +1,66 @@
+# Font configuration
+[font]
+size = 14.0
+
+[font.normal]
+family = "MesloLGMDZ Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGMDZ Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGMDZ Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGMDZ Nerd Font Mono"
+style = "Bold Italic"
+
+# Disable bell
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+color = "#000000"
+
+# Cursor
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+# Tokyo Night Theme
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+
+[colors.normal]
+black   = "#15161e"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
+
+[colors.bright]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#c0caf5"
+
+[colors.selection]
+text = "#c0caf5"
+background = "#33467c"

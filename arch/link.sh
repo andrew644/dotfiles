@@ -7,6 +7,9 @@ mkdir -p ~/.config/kitty
 ln -sf ~/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf ~/dotfiles/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
 
+mkdir -p ~/.config/alacritty
+ln -sf ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+
 mkdir -p ~/.config/niri
 ln -sf ~/dotfiles/niri/config.kdl ~/.config/niri/config.kdl
 
