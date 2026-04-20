@@ -499,7 +499,6 @@ binds {
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
-    Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
@@ -539,6 +538,9 @@ binds {
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
+
+	// Rotate screen
+	Mod+Shift+R { spawn "~/dotfiles/scripts/niri_rotate.sh"; }
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
