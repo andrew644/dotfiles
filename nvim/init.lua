@@ -1,21 +1,36 @@
-require "andrew.plugins"
-require "andrew.lualine"
-require "andrew.latex"
+----------------------------------------------------------------------
+--- BOOTSTRAP REGION
+----------------------------------------------------------------------
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
+end
+vim.opt.rtp:prepend(lazypath)
+----------------------------------------------------------------------
+--- SETTINGS REGION
+----------------------------------------------------------------------
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+--
 -- Set space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
--- Colorscheme
-local colorscheme = "tokyonight-moon"
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-	vim.notify("colorscheme " .. colorscheme .. " not found!")
-	return
-end
 
 -- Set options
 local options = {
@@ -60,7 +75,42 @@ vim.opt.listchars = {
 	precedes = '«',     -- Character for lines that precede the window
 	nbsp = '¬'          -- Character for non-breaking spaces
 }
+----------------------------------------------------------------------
+--- PLUGINS REGION
+----------------------------------------------------------------------
+-- Setup lazy.nvim
+require("lazy").setup({
+	spec = {
+		{ "folke/tokyonight.nvim", lazy = false, priority = 1000 },
+		{ "folke/which-key.nvim" },
+		{
+			'nvim-telescope/telescope.nvim', version = '*',
+			dependencies = {
+				'nvim-lua/plenary.nvim',
+			}
+		},
+		{ "neovim/nvim-lspconfig" },
+		{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+		{ "lervag/vimtex", lazy = false, },
+	},
+	-- colorscheme that will be used when installing plugins.
+	install = { colorscheme = { "habamax" } },
+	-- automatically check for plugin updates
+	checker = { enabled = true },
+})
+----------------------------------------------------------------------
+--- COLORSCHEME REGION
+----------------------------------------------------------------------
+local colorscheme = "tokyonight-moon"
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
+end
 
+----------------------------------------------------------------------
+--- KEYMAP REGION
+----------------------------------------------------------------------
 -- Disable Q
 keymap("n", "Q", "<nop>", opts)
 keymap("n", "q", "<nop>", opts)
@@ -95,7 +145,9 @@ keymap("n", "<F3>", ":let &background = ( &background == 'dark' ? 'light' : 'dar
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
--- LSP
+----------------------------------------------------------------------
+--- LSP REGION
+----------------------------------------------------------------------
 vim.o.complete = ".,o" -- use buffer and omnifunc
 vim.o.completeopt = "fuzzy,menuone,noselect" -- add 'popup' for docs (sometimes)
 vim.o.autocomplete = true
@@ -160,3 +212,74 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		vim.cmd("edit!") -- reload buffer
 	end,
 })
+
+----------------------------------------------------------------------
+--- LUALINE REGION
+----------------------------------------------------------------------
+require('lualine').setup {
+	options = {
+		icons_enabled = true,
+		theme = 'auto',
+		component_separators = { left = '', right = ''},
+		section_separators = { left = '', right = ''},
+		disabled_filetypes = {
+			statusline = {},
+			winbar = {},
+		},
+		ignore_focus = {},
+		always_divide_middle = true,
+		globalstatus = false,
+		refresh = {
+			statusline = 1000,
+			tabline = 1000,
+			winbar = 1000,
+		}
+	},
+	sections = {
+		lualine_a = {'mode'},
+		lualine_b = {'branch', 'diff', 'diagnostics'},
+		lualine_c = {'filename'},
+		lualine_x = {'encoding', 'fileformat', 'filetype'},
+		lualine_y = {'progress'},
+		lualine_z = {'location'}
+	},
+	inactive_sections = {
+		lualine_a = {},
+		lualine_b = {},
+		lualine_c = {'filename'},
+		lualine_x = {'location'},
+		lualine_y = {},
+		lualine_z = {}
+	},
+	tabline = {},
+	winbar = {},
+	inactive_winbar = {},
+	extensions = {}
+}
+----------------------------------------------------------------------
+--- LATEX REGION
+----------------------------------------------------------------------
+-- Use Zathura as the PDF viewer
+vim.g.vimtex_view_method = 'zathura'
+
+-- Set the LaTeX flavor to use
+vim.g.vimtex_flavor = 'latex'
+
+-- Enable continuous compilation
+vim.g.vimtex_compiler_latexmk = {
+	build_dir = '',
+	callback = 1,
+	continuous = 1,
+	executable = 'latexmk',
+	options = {
+		'-verbose',
+		'-file-line-error',
+		'-synctex=1',
+		'-interaction=nonstopmode',
+	},
+}
+
+-- Enable reverse search from PDF to source
+vim.g.vimtex_view_reverse_search_edit_cmd = 'nvr --remote-silent %f -c %l'
+
+vim.api.nvim_set_keymap('n', '<localleader>ll', '<cmd>VimtexCompile<CR>', {noremap = true, silent = true})

@@ -23,11 +23,5 @@ sudo ln -sf ~/dotfiles/arch/andrew_pacman_install.hook /etc/pacman.d/hooks/andre
 sudo mkdir -p /etc/NetworkManager/conf.d
 sudo ln -sf ~/dotfiles/arch/wifi_backend.conf /etc/NetworkManager/conf.d/wifi_backend.conf
 
-mkdir -p ~/.config/nvim/lua/andrew
+mkdir -p ~/.config/nvim
 ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
-ln -sf ~/dotfiles/nvim/lua/andrew/plugins.lua ~/.config/nvim/lua/andrew/plugins.lua
-ln -sf ~/dotfiles/nvim/lua/andrew/lualine.lua ~/.config/nvim/lua/andrew/lualine.lua
-ln -sf ~/dotfiles/nvim/lua/andrew/latex.lua ~/.config/nvim/lua/andrew/latex.lua
-
-#mkdir -p ~/.emacs.d
-#ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el
