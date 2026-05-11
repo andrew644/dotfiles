@@ -96,6 +96,35 @@ keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- LSP
+vim.o.complete = ".,o" -- use buffer and omnifunc
+vim.o.completeopt = "fuzzy,menuone,noselect" -- add 'popup' for docs (sometimes)
+vim.o.autocomplete = true
+vim.o.pumheight = 7
+
+vim.lsp.enable({ "mylangservers" })
+
+-- use <C-n> to accept / next each completion
+-- <C-p> for prev
+-- <C-e> for cancel
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(ev)
+		vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
+			convert = function(item)
+				-- cap field to 30 chars
+				local abbr = item.label
+				abbr = abbr:gsub("%b()", ""):gsub("%b{}", "")
+				abbr = abbr:match("[%w_.]+.*") or abbr
+				abbr = #abbr > 30 and abbr:sub(1, 29) .. "…" or abbr
+
+				-- Cap return value field to 15 chars
+				--local menu = item.detail or ""
+				--menu = #menu > 15 and menu:sub(1, 14) .. "…" or menu
+				return { abbr = abbr, menu = menu }
+			end,
+		})
+	end,
+})
+
 vim.lsp.enable({"rust_analyzer", "vtsls", "ols"})
 vim.lsp.config('rust_analyzer', {
 	settings = {
@@ -108,7 +137,6 @@ vim.lsp.config('rust_analyzer', {
 		},
 	},
 })
-keymap("i", "<C-Space>", "<C-x><C-o>", opts) -- keymap for omni complete
 
 -- format rust on save
 vim.api.nvim_create_autocmd("BufWritePre", {
