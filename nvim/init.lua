@@ -92,6 +92,7 @@ require("lazy").setup({
 		{ "neovim/nvim-lspconfig" },
 		{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 		{ "lervag/vimtex", lazy = false, },
+		{ "rcarriga/nvim-dap-ui", dependencies = {"https://codeberg.org/mfussenegger/nvim-dap.git", "nvim-neotest/nvim-nio"} },
 	},
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "habamax" } },
@@ -283,3 +284,51 @@ vim.g.vimtex_compiler_latexmk = {
 vim.g.vimtex_view_reverse_search_edit_cmd = 'nvr --remote-silent %f -c %l'
 
 vim.api.nvim_set_keymap('n', '<localleader>ll', '<cmd>VimtexCompile<CR>', {noremap = true, silent = true})
+----------------------------------------------------------------------
+--- DEBUG REGION
+----------------------------------------------------------------------
+local dap = require("dap")
+local dapui = require("dapui")
+
+dapui.setup()
+
+dap.adapters.lldb = {
+	type = 'executable',
+	command = 'lldb-dap',
+	name = 'lldb'
+}
+
+dap.listeners.before.attach.dapui_config = function()
+	dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+	dapui.close()
+end
+
+dap.configurations.cpp = {
+	{
+		name = 'Launch',
+		type = 'lldb',
+		request = 'launch',
+		program = function()
+			return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+		end,
+		cwd = '${workspaceFolder}',
+		stopOnEntry = false,
+		args = {},
+	},
+}
+dap.configurations.c = dap.configurations.cpp
+dap.configurations.rust = dap.configurations.cpp
+dap.configurations.odin = dap.configurations.cpp
+
+keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", opts)
+keymap('n', '<F10>', ":lua require'dap'.step_over()<CR>", opts)
+keymap('n', '<F11>', ":lua require'dap'.step_into()<CR>", opts)
+keymap('n', '<F9>', ":lua require'dap'.toggle_breakpoint()<CR>", opts)
