@@ -93,6 +93,7 @@ require("lazy").setup({
 		{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 		{ "lervag/vimtex", lazy = false, },
 		{ "rcarriga/nvim-dap-ui", dependencies = {"https://codeberg.org/mfussenegger/nvim-dap.git", "nvim-neotest/nvim-nio"} },
+		{ "OXY2DEV/markview.nvim", lazy = false, },
 	},
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "habamax" } },

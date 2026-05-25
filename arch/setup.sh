@@ -6,7 +6,7 @@
 chsh -s $(which zsh)
 
 #install typescript language-server
-sudo npm install -g @vtsls/language-server
+#sudo npm install -g @vtsls/language-server
 
 #git
 git config --global user.name "andrew644"
