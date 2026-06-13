@@ -69,3 +69,10 @@ pacman -F binary_name
 # Check file system usage
 df -h
 du -h
+
+# copy linux iso to usb drive
+sudo dd if=/path/to/your/isofile of=/dev/sdx bs=8M status=progress
+
+# get external usb cd drive working
+create a file /etc/modules-load.d/sg.conf with the content `sg`
+and reboot
