@@ -25,3 +25,6 @@ sudo ln -sf ~/dotfiles/arch/wifi_backend.conf /etc/NetworkManager/conf.d/wifi_ba
 
 mkdir -p ~/.config/nvim
 ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+
+mkdir -p ~/.emacs.d
+ln -sf ~/dotfiles/emacs/init.el ~/.emacs.d/init.el

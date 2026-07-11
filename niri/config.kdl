@@ -16,8 +16,8 @@ input {
     }
 
     mouse {
-        accel-speed 1.0
-        //accel-profile "flat"
+        accel-speed 0.7
+        accel-profile "flat"
     }
 
     trackpoint {

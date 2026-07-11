@@ -74,5 +74,6 @@ du -h
 sudo dd if=/path/to/your/isofile of=/dev/sdx bs=8M status=progress
 
 # get external usb cd drive working
-create a file /etc/modules-load.d/sg.conf with the content `sg`
-and reboot
+Create a file /etc/modules-load.d/sg.conf with the content `sg`
+and reboot.
+Use whipper cd rip -O ~/Music/rip --offset=6
