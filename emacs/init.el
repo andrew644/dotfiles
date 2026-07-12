@@ -224,21 +224,76 @@
   ;; Optionally make narrowing help available in the minibuffer.
   ;; You may want to use `embark-prefix-help-command' or which-key instead.
   ;; (keymap-set consult-narrow-map (concat consult-narrow-key " ?") #'consult-narrow-help)
-)
+	)
+
+(setq completion-cycle-threshold 3)
+(setq tab-always-indent 'complete)
+(setq completion-ignore-case t)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 ;; ================ End of Completion ====================
 (use-package which-key
-  :Config
+  :config
   (which-key-mode))
 
 ;; My key mappings
 (define-key my/leader-map (kbd "p") #'project-find-file)
 
+
+;; Odin LSP
+(require 'treesit)
+(add-to-list 'treesit-language-source-alist
+             '(odin "https://github.com/tree-sitter-grammars/tree-sitter-odin"))
+
+(defun my/run-odin ()
+  (interactive)
+  (compile "odin run ."))
+
+(defun my/odin-mode-setup ()
+  (setq-local tab-width 4)
+  (add-hook 'before-save-hook #'eglot-format-buffer nil t))
+
+(use-package odin-ts-mode
+  :vc (:url "https://github.com/Sampie159/odin-ts-mode")
+  :mode "\\.odin\\'"
+  :hook (odin-ts-mode . my/odin-mode-setup))
+
+(use-package eglot
+  :ensure nil
+  :hook (odin-ts-mode . eglot-ensure)
+  :config
+  (add-to-list 'eglot-server-programs
+               '(odin-ts-mode . ("~/bin/ols"))))
+
+(use-package corfu
+  :init
+  (global-corfu-mode)
+
+  :custom
+  (corfu-auto t)
+  (corfu-auto-prefix 2)
+  (corfu-auto-delay 0.2)
+  (corfu-cycle t)
+  (corfu-preview-current nil))
+
+(use-package cape
+  :init
+  ;; Add cape to the front of completion-at-point-functions
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev))
+
+(use-package flymake
+  :ensure nil
+  :hook (prog-mode . flymake-mode))
+
+(use-package exec-path-from-shell
+  :config
+  (exec-path-from-shell-initialize))
+
 ;;TODO
 ;; lsp support
-;; - odin
 ;; - elisp
 ;; - autocomplete
 ;; debug support lldb
-;; format odin on save
 ;;
 
