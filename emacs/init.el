@@ -239,6 +239,13 @@
 ;; My key mappings
 (define-key my/leader-map (kbd "p") #'project-find-file)
 
+;; Rust
+(use-package rust-mode
+  :ensure t
+  :mode "\\.rs\\'"
+  :init
+  (setq rust-format-on-save t)
+  :hook (rust-mode . eglot-ensure))
 
 ;; Odin LSP
 (require 'treesit)
@@ -263,7 +270,7 @@
   :hook (odin-ts-mode . eglot-ensure)
   :config
   (add-to-list 'eglot-server-programs
-               '(odin-ts-mode . ("~/bin/ols"))))
+               '(odin-ts-mode . ("ols"))))
 
 (use-package corfu
   :init
