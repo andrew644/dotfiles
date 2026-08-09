@@ -45,6 +45,9 @@
 (setq hscroll-margin 8)
 (setq scroll-conservatively 101)
 
+;; Disable backup files (files with ~ at the end)
+(setq make-backup-files nil)
+
 ;; Font
 (set-face-attribute 'default nil
                     :family "MesloLGMDZ Nerd Font Mono"
