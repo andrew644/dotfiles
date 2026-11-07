@@ -61,3 +61,4 @@ alias restart='sudo shutdown -r now'
 
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.bun/bin
